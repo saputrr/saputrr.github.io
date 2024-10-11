@@ -44,90 +44,22 @@
 <!-- The body tag contains the elements that visitors to our page will see. -->
     <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
         <!-- This is a header, it is the largest text on the page -->
-        R. Saputri
+        <a href="saputrr.github.io">R. Saputri</a>
     </h1>
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
         <a href="portfolio.html">Portfolio</a> | <a href="project.html">Project</a> | <a href="https://uk.linkedin.com/in/rizkisaputri">LinkedIn</a> | <a
             href="https://www.github.com/saputrr">GitHub</a>
     </p>
+<br>
+<br>
+<br>
+<br>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.  
+        Salam. I am Kiki, MPA Candidate from London School of Economics and Political Science. This webpage is build as a part of Automated Data Visualisation for Policymaking course taught by <a href="https://www.lse.ac.uk/school-of-public-policy/people/Richard-Davies">Professor Richard Davies</a>.   
     </h3>
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 2: Declining Population</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-            </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 3: Inflation</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 4: GDP Indonesia</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
-
-
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
-    <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
-
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-        let figure_2_spec = "chart1_declining_population.json"       
-        let figure_3_spec = "chart2_inflation.json"                                               // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-      
-
-        vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
-
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
-        // let figure_3_spec = ...
-        // vegaEmbed('#Location3', figure_3_spec)
-
-        vegaEmbed('#Location2', figure_2_spec)
-        vegaEmbed('#Location3', figure_3_spec)
-        vegaEmbed('#Location4', 'chart3_china.json')
-    </script>
-
+   
 </body>
     
 </html>
