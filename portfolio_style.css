@@ -1,22 +1,58 @@
-/* This is an example CSS file. If you include it in your portfolio, it'll provide some clean and basic styling */
-/* for your page. Feel free to experiment with the values, or copy them into a new file and use that instead. */
-
-/* These are comments in CSS. Comments don't do anything except explain your working to make code easier to understand. */
+/* saputrr.github.io CSS basic*/
 
 
 body { /* We can style any HTML element by using its name - here we're styling the body */
-  /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* I want to use Afacad Flux font want text that uses a clean sans-serif font, is usually 16px big and close to black */
+  font-family: 'Afacad Flux', Tahoma, Geneva, Verdana, sans-serif, Arial, sans-serif;
   font-size: 16px;
   color: #333;
   line-height: 1.6;
   /* we want a white page, that's centered and not too wide */
   background-color: #fff;
-  margin:0 auto;
+  margin:0 200px; /* I changed the code from 0 auto to 0 200px because auto makes the other page shifted to the left*/
   max-width: 800px;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
+/* Header*/
+header {
+  font-family: 'Dr Sugiyama', cursive;
+  color: #82277f;
+  font-size: 60px;
+  position: fixed;  /* Makes the header stay in place while scrolling */
+  top: 0px;  /* Aligns the header at the top */
+  left: 200px;
+  width: 100%;
+  margin:0 auto;
+  background-color: white;  /* Ensures background remains solid while scrolling */
+  z-index: 1000;  /* Keeps the header above other content */
+  padding-top: 40px;  /* Add padding instead of margin for the top space */
+  padding-bottom: 0;
+}
+
+p {
+  margin-top: 0px;
+  padding-top: 80px;  /* Adds space below the header to prevent content from being hidden behind it */
+}
+
+nav {
+  position: fixed;
+  top: 125px; /* Positioned right under the header */
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  z-index: 999; /* Just below the header in layering */
+  text-align: left;
+  font-family: 'Afacad Flux', Tahoma, sans-serif;
+  font-size: 16px;
+  color: #82277f;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit; /* Keep the text color the same as in the nav */
+}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -34,9 +70,13 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-size: 1.75em;
 }
+.medium {
+  font-size: 1.25em;
+}
 
 .small {
   font-size: 1.25em;
+  font-weight: normal; /* This removes the bold styling */
 }
 
 /* Paragraph */
@@ -52,7 +92,7 @@ section {
 /* Links */
 /* We want the links to be a little more visible  and a different color */
 a {
-  color: #065f46;
+  color: #82277f !important;
   text-decoration: none;
 }
 
@@ -66,7 +106,59 @@ img {
   height: auto;
 }
 
+/* Solve the container thing */
 figure {
   width: 100%;
-  max-width:500px;
+  max-width: 500px;
+}
+
+/* Adding google font for header*/
+
+.dr-sugiyama-regular {
+  font-family: "Dr Sugiyama", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Media Query for smaller screens (phones and small tablets) */
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0 20px;  /* Reduce margins for smaller screens */
+    max-width: 100%;
+    padding-top: 60px;
+  }
+
+  header {
+    font-size: 40px;  /* Smaller font for header on small screens */
+    left: 0;
+    width: 100%;  /* Full-width header */
+    padding: 10px 0;
+  }
+
+  nav {
+    top: 120px;  /* Position nav further down on small screens */
+    left: 0;
+    width: 100%;  /* Full-width navigation */
+    font-size: 14px;  /* Slightly smaller font for nav links */
+  }
+
+  nav a {
+    margin-right: 10px;  /* Reduce space between links */
+  }
+
+  p {
+    padding-top: 180px;  /* Adjust space to accommodate header + nav */
+  }
+}
+
+/* Media Query for very small screens (small phones) */
+@media only screen and (max-width: 480px) {
+  header {
+    font-size: 30px;  /* Further reduce header font size */
+  }
+
+  nav {
+    font-size: 12px;  /* Smaller font for nav */
+  }
 }
