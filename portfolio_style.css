@@ -17,17 +17,25 @@ body { /* We can style any HTML element by using its name - here we're styling t
 /* Header*/
 header {
   font-family: 'Dr Sugiyama', cursive;
-  color: #82277f;
+  color: #ffc7fc;
   font-size: 60px;
   position: fixed;  /* Makes the header stay in place while scrolling */
   top: 0px;  /* Aligns the header at the top */
-  left: 200px;
+  left: 0px;
   width: 100%;
   margin:0 auto;
-  background-color: white;  /* Ensures background remains solid while scrolling */
+  background-color: rgb(31, 15, 24);  /* Ensures background remains solid while scrolling */
   z-index: 1000;  /* Keeps the header above other content */
   padding-top: 40px;  /* Add padding instead of margin for the top space */
   padding-bottom: 0;
+}
+header .header-content {
+  padding-left: 200px; /* Indent the text to start at 200px */
+}
+
+header .header-content a {
+  color: rgb(246, 211, 234) !important; /* Force the color to be white, even if it's a link */
+  text-decoration: none; /* Remove underline */
 }
 
 p {
@@ -40,7 +48,7 @@ nav {
   top: 125px; /* Positioned right under the header */
   margin: 0 auto;
   width: 100%;
-  background-color: white;
+  background-color: rgb(207, 203, 203);
   z-index: 999; /* Just below the header in layering */
   text-align: left;
   font-family: 'Afacad Flux', Tahoma, sans-serif;
@@ -92,7 +100,7 @@ section {
 /* Links */
 /* We want the links to be a little more visible  and a different color */
 a {
-  color: #82277f !important;
+  color: #82277f;
   text-decoration: none;
 }
 
