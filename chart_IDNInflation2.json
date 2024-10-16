@@ -4,13 +4,13 @@
       "text": "Inflation",
       "anchor": "start",
       "subtitle": "CPI, % MoM | Source: BPS through ECO API",
-      "fontSize": "16",
-      "subtitleFontSize": "12",
+      "fontSize": 16,
+      "subtitleFontSize": 12,
       "font": "Afacad Flux",
       "color": "rgb(117, 78, 153)",
       "subtitleColor": "#333333"
     },
-    "height": "250",
+    "height": 250,
     "width": "container",
     "autosize": {
       "type": "fit",
@@ -22,7 +22,7 @@
       "strokeOpacity": 0
     },
     "data": {
-      "url": "./data/IDNInflation.csv",
+      "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/IDNInflation.csv",
       "format": {
         "type": "csv",
         "parse": {
@@ -82,9 +82,9 @@
         "mark": {
           "type": "point",
           "filled": true,
-          "size": 100,  // Make the hoverable point larger
+          "size": 100,
           "color": "rgb(117, 78, 153)",
-          "opacity": 0  // Make the points invisible for cleaner design
+          "opacity": 0 
         },
         "encoding": {
           "x": {
@@ -99,7 +99,7 @@
             {
               "field": "date",
               "type": "temporal",
-              "timeUnit": "month",  // Show month in the tooltip
+              "timeUnit": "month", 
               "title": "Month"
             },
             {
