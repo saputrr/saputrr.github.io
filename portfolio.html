@@ -82,6 +82,8 @@
 <br>
 <br>
 <br>
+<br>
+
     <h3 class="medium"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
         This page documents the learning process of visualizing data and storytelling through charts and graphs.  
     </h3>
@@ -93,7 +95,7 @@
             <h2>Week 1: Introduction</h2>
                        
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                By the end of the lecture and seminar, we learned how to use GitHub, Visual Studio Code, and embed live charts into our website.
+                By the end of the lecture and seminar, I learned how to use GitHub, Visual Studio Code, and embed live charts into my website.
                 I also learned how to organise the page into sections, with each section containing a chart, title and a description. Here, I can describe the chart and give some context.
                 As a first example, I am using a basic chart from the existing repository.
             </p>
@@ -101,7 +103,7 @@
         <h3 class="small">
             <strong> Chart 1: GDP and Life Expectancy </strong> 
         </h3>
-        
+        <p> Here, I embeded the chart which visualises the relationship between GDP per capita and life expectancy. I took this chart from <a href="https://www.economicsobservatory.com/explore">Economics Observatory</a> without any adjustments.</p>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
@@ -111,6 +113,7 @@
                 <strong> Chart 2: Declining Population</strong> 
             </h3>
         </div>
+        <p>I took another chart from <a href="https://rdeconomist.github.io/library">Chart Library</a>. Again, without any adjustments.</p>
         <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
             </section>
 
@@ -118,6 +121,7 @@
         <div class="chart-description">
             <h3><strong>Chart 3: Inflation</strong></h3>
             </div>
+            <p>And another chart from <a href="https://rdeconomist.github.io/library">Chart Library</a>. But sometimes it shows, sometimes it does not. I will take note and update why this glitch happens occasionally.</p>
         <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
@@ -125,10 +129,28 @@
         <div class="chart-description">
             <h2>Week 2: Playing with Vega-Lite Editor</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                This week, I learned how to customize charts using the <a href="vega.github.io/editor/">Vega Lite Editor</a>.
+                Last week, I  learned how to copy and paste the chart from template to this website. This week, I learned how to customize charts using the <a href="vega.github.io/editor/">Vega Lite Editor</a>. Simple steps: I pick dataset from <a href="https://www.economicsobservatory.com/create">Economics Observatory</a>, then I copy-paste-customize the code in <a href="vega.github.io/editor/">Vega Lite Editor</a>. Since I am from Indonesia, I chose the data from this country. I will start with the basics: GDP growth. I customized the chart so that the colors and fonts match with the setting in my website.
             </p>
         </div>
-        <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <h3 class="small">
+            <strong>Chart 4: Indonesia GDP Growth</strong> 
+        </h3>
+        <p> I added a dashed line at the y-axis with a value of 0 to indicate that there was a contraction during the 2020-2021 period due to Covid-19. I managed to create a red shading for the contraction period, accompanied by a note stating "Covid-19" in the <a href="vega.github.io/editor/">Vega Lite Editor</a>. However, when I embedded the chart on my website, it did not appear. I will take note of this issue and provide you with an update later.</p>
+
+        <figure id="Location4"></figure> 
+
+        <h3 class="small">
+            <strong>Chart 5: Indonesia Inflation</strong> 
+        </h3>
+        <p> I retrieved Indonesia's inflation data from the <a href="https://www.economicsobservatory.com/create">Economics Observatory</a>, which sources its API data from the Statistics Office of Indonesia. However, it was not immediately clear whether the data represented monthly or annual percentages. So, I took the following steps: (1) Check the data. After checking the data, I found that it reflects the month-on-month percentage change (MoM) so I edited the notes below the title. (2) Due to the  fluctuation caused by seasonality, I chose to show only the end-of-period (December) data. Additionally, I limited the data to start from 2011 to align it with the GDP data above.</p>
+
+        <figure id="Location5"></figure>
+        <p> However, the data above is not up-to-date (the latest data is from 2019). Therefore, I created another csv dataset and uploaded it in GitHub, then built the chart from scratch. I also added a tooltip so we can hover over the line chart to display the month and value. 
+            <br>
+            <br>
+            Interestingly, the current dataset reveals that Indonesia experienced deflation for five consecutive months. This is a rare occurence, even during Covid-19 pandemic. Some attribute it to declining purchasing power. But is that really the case?</p>
+
+        <figure id="Location6"></figure>
     </section>
 
     <!-- Do you want to add more sections? -->
@@ -156,7 +178,10 @@
 
         vegaEmbed('#Location2', figure_2_spec)
         vegaEmbed('#Location3', figure_3_spec)
-        vegaEmbed('#Location4', 'chart3_china.json')
+        vegaEmbed('#Location4', 'chart_IDNGDP.json').catch(console.error)
+        vegaEmbed('#Location5', 'chart_IDNInflation.json')
+        vegaEmbed('#Location6', 'chart_IDNInflation2.json')
+        
     </script>
 
 </body>
