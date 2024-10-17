@@ -67,12 +67,13 @@
 </head>
 
 <body>
-    <header>
-        <!-- Link to saputrr.github.io -->
+    <div class="container">
+        <header>
+            <!-- Link to saputrr.github.io -->
         
-        <div class="header-content"><a href="saputrr.github.io">R. Saputri</a></div>
+            <div class="header-content"><a href="saputrr.github.io">R. Saputri</a></div>
     
-    </header>
+        </header>
 
     <nav>
         <a href="portfolio.html">Portfolio</a> | <a href="project.html">Project</a> | <a href="https://uk.linkedin.com/in/rizkisaputri">LinkedIn</a> | <a
@@ -135,9 +136,10 @@
         <h3 class="small">
             <strong>Chart 4: Indonesia GDP Growth</strong> 
         </h3>
-        <p> I added a dashed line at the y-axis with a value of 0 to indicate that there was a contraction during the 2020-2021 period due to Covid-19. I managed to create a red shading for the contraction period, accompanied by a note stating "Covid-19" in the <a href="vega.github.io/editor/">Vega Lite Editor</a>. However, when I embedded the chart on my website, it did not appear. I will take note of this issue and provide you with an update later.</p>
+        <p>I added a dashed line at the y-axis with a value of 0 to indicate that there was a contraction during the 2020-2021 period due to Covid-19. I managed to create a shading for the contraction period, accompanied by a note stating "Covid-19" in the <a href="vega.github.io/editor/">Vega Lite Editor</a>. However, when I embedded the chart on my website, it did not appear. I will take note of this issue and provide you with an update later.</p>
 
         <figure id="Location4"></figure> 
+        <p><strong>Update:</strong> I managed to attach the Covid-19 shaded chart in this page after resolving problems in the chart's json file. We can find the list of the problems by shortcut Ctrl+Shift+M in our visual Studio Code.</p>
 
         <h3 class="small">
             <strong>Chart 5: Indonesia Inflation</strong> 
@@ -145,13 +147,13 @@
         <p> I retrieved Indonesia's inflation data from the <a href="https://www.economicsobservatory.com/create">Economics Observatory</a>, which sources its API data from the Statistics Office of Indonesia. However, it was not immediately clear whether the data represented monthly or annual percentages. So, I took the following steps: (1) Check the data. After checking the data, I found that it reflects the month-on-month percentage change (MoM) so I edited the notes below the title. (2) Due to the  fluctuation caused by seasonality, I chose to show only the end-of-period (December) data. Additionally, I limited the data to start from 2011 to align it with the GDP data above.</p>
 
         <figure id="Location5"></figure>
-        <p> However, the data above is not up-to-date (the latest data is from 2019). Therefore, I created another csv dataset with updated data and uploaded it in GitHub. Then, I built the chart from scratch. I also added a tooltip so we can hover over the line chart to display the month and value. 
         <br>
-        <figure id="Location6"></figure>
+        <p> However, the data above is not up-to-date (the latest data is from 2019). Therefore, I created another csv dataset and uploaded it in GitHub, then built the chart from scratch. I also added a tooltip so we can hover over the line chart to display the month and value. 
+            <br>
+            <figure id="Location6"></figure>            
+            Interestingly, the current dataset reveals that Indonesia experienced deflation for five consecutive months. This is a rare occurence, even during Covid-19 pandemic. Some attribute it to declining purchasing power. But is that really the case?</p>
 
-        <p>Interestingly, the current dataset reveals that Indonesia experienced deflation for five consecutive months. This is a rare occurence, even during Covid-19 pandemic. Some attribute it to declining purchasing power. But is that really the case?</p>
-
-     </section>
+    </section>
 
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
@@ -178,12 +180,12 @@
 
         vegaEmbed('#Location2', figure_2_spec)
         vegaEmbed('#Location3', figure_3_spec)
-        vegaEmbed('#Location4', 'chart_IDNGDP.json').catch(console.error)
+        vegaEmbed('#Location4', 'chart_IDNGDPCovid.json').catch(console.error)
         vegaEmbed('#Location5', 'chart_IDNInflation.json')
         vegaEmbed('#Location6', 'chart_IDNInflation2.json')
         
     </script>
-
+    </div>
 </body>
     
 </html>

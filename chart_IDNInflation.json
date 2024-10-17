@@ -3,7 +3,7 @@
     "title": {
       "text": "Inflation",
       "anchor": "start",
-      "subtitle": "CPI, % MoM | Source: BPS through ECO API",
+      "subtitle": "CPI, end of period, % MoM | Source: BPS through ECO API",
       "fontSize": 16,
       "subtitleFontSize": 12,
       "font": "Afacad Flux",
