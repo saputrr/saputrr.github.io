@@ -86,7 +86,8 @@ h2 {
 /* Paragraph */
 p {
   margin-bottom: 1em;
-  font-weight: 300;
+  font-weight: 350;
+  font-size: 17px;
 }
 
 section {
