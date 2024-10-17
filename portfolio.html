@@ -79,11 +79,7 @@
         <a href="portfolio.html">Portfolio</a> | <a href="project.html">Project</a> | <a href="https://uk.linkedin.com/in/rizkisaputri">LinkedIn</a> | <a
             href="https://www.github.com/saputrr">GitHub</a>
       </nav>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
     <h3 class="medium"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
         This page documents the learning process of visualizing data and storytelling through charts and graphs.  
@@ -139,7 +135,7 @@
         <p>I added a dashed line at the y-axis with a value of 0 to indicate that there was a contraction during the 2020-2021 period due to Covid-19. I managed to create a shading for the contraction period, accompanied by a note stating "Covid-19" in the <a href="vega.github.io/editor/">Vega Lite Editor</a>. However, when I embedded the chart on my website, it did not appear. I will take note of this issue and provide you with an update later.</p>
 
         <figure id="Location4"></figure> 
-        <p><strong>Update:</strong> I managed to attach the Covid-19 shaded chart in this page after resolving problems in the chart's json file. We can find the list of the problems by shortcut Ctrl+Shift+M in our visual Studio Code.</p>
+        <p><strong>Update:</strong> I managed to attach the Covid-19 shaded chart in this page after resolving problems in the chart's json file. We can find the list of the problems by shortcut Ctrl+Shift+M in our Visual Studio Code.</p>
 
         <h3 class="small">
             <strong>Chart 5: Indonesia Inflation</strong> 
@@ -148,14 +144,27 @@
 
         <figure id="Location5"></figure>
         <br>
-        <p> However, the data above is not up-to-date (the latest data is from 2019). Therefore, I created a new csv file with updated dataset and uploaded it in GitHub. Then I built the chart from scratch. I also added a tooltip so we can hover over the line chart to display the month and value. 
+        <p> However, the data above is not up-to-date (the latest data is from 2019). Therefore, I created another csv dataset and uploaded it in GitHub, then built the chart from scratch. I also added a tooltip so we can hover over the line chart to display the month and value. 
             <br>
-            <figure id="Location6"></figure> 
+            <figure id="Location6"></figure>            
             <br>
-           <p>Interestingly, the current dataset reveals that Indonesia experienced deflation for five consecutive months. This is a rare occurence, even during Covid-19 pandemic. Some attribute it to declining purchasing power. But is that really the case?</p>
+            <p>Interestingly, the current dataset reveals that Indonesia experienced deflation for five consecutive months. This is a rare occurence, even during Covid-19 pandemic. Some attribute it to declining purchasing power. But is that really the case?</p>
 
     </section>
 
+    <section>
+        <div class="chart-description">
+            <h2>Week 3: Grammar of Graphics</h2>
+            <p> This week, we discussed visualisation as the language of data. We plotted Anscombe's quartet: where four datasets with nearly identical simple descriptive statistics appear very different when graphed. That shows the importance of visualisation.
+            </p>
+        </div>
+        <h3 class="small">
+            <strong>Chart 6: Anscombe's Quartet</strong> 
+        </h3>
+        <figure id="Location7"></figure> 
+
+    </section>
+ 
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
@@ -184,6 +193,8 @@
         vegaEmbed('#Location4', 'chart_IDNGDPCovid.json').catch(console.error)
         vegaEmbed('#Location5', 'chart_IDNInflation.json')
         vegaEmbed('#Location6', 'chart_IDNInflation2.json')
+        vegaEmbed('#Location7', 'chart_anscombe.json')
+
         
     </script>
     </div>

@@ -1,65 +1,60 @@
 /* saputrr.github.io CSS basic*/
 
-
-body { /* We can style any HTML element by using its name - here we're styling the body */
-  /* I want to use Afacad Flux font want text that uses a clean sans-serif font, is usually 16px big and close to black */
+body {
   font-family: 'Afacad Flux', Tahoma, Geneva, Verdana, sans-serif, Arial, sans-serif;
   font-size: 16px;
   color: #333;
   line-height: 1.6;
-  /* we want a white page, that's centered and not too wide */
   background-color: #fff;
-  margin:0 200px; /* I changed the code from 0 auto to 0 200px because auto makes the other page shifted to the left*/
+  margin: 0 auto;  /* Center body content */
   max-width: 800px;
   padding-top: 80px;
 }
 
-/* Header*/
+/* Header */
 header {
   font-family: 'Dr Sugiyama', cursive;
   color: #ffc7fc;
   font-size: 60px;
-  position: fixed;  /* Makes the header stay in place while scrolling */
-  top: 0px;  /* Aligns the header at the top */
+  position: fixed;
+  top: 0px;
   left: 0px;
   width: 100%;
-  margin:0 auto;
-  background-color: rgb(31, 15, 24);  /* Ensures background remains solid while scrolling */
-  z-index: 1000;  /* Keeps the header above other content */
-  padding-top: 40px;  /* Add padding instead of margin for the top space */
+  margin: 0 auto;
+  background-color: rgb(31, 15, 24);
+  z-index: 1000;
+  padding-top: 40px;
   padding-bottom: 0;
 }
+
 header .header-content {
-  padding-left: 200px; /* Indent the text to start at 200px */
+  padding-left: 200px; /* Leave this here if necessary */
 }
 
 header .header-content a {
-  color: rgb(246, 211, 234) !important; /* Force the color to be white, even if it's a link */
-  text-decoration: none; /* Remove underline */
+  color: rgb(246, 211, 234) !important;
+  text-decoration: none;
 }
 
-p {
-  margin-top: 0px;
-  padding-top: 0px;  /* Adds space below the header to prevent content from being hidden behind it */
-}
-
+/* Navigation bar */
 nav {
   position: fixed;
-  top: 125px; /* Positioned right under the header */
-  margin: 0 auto;
-  width: 100%;
+  top: 125px;
+  width: 100%; /* Ensure nav takes full width */
   background-color: rgb(207, 203, 203);
-  z-index: 999; /* Just below the header in layering */
+  z-index: 999;
   text-align: left;
   font-family: 'Afacad Flux', Tahoma, sans-serif;
   font-size: 16px;
   color: #82277f;
   padding: 10px 0;
+  display: inline-block;
+  margin: 0;
 }
 
 nav a {
   text-decoration: none;
-  color: inherit; /* Keep the text color the same as in the nav */
+  color: inherit;
 }
 
 /* Headings */
@@ -70,21 +65,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* We want the headings to be a little bigger than the paragraph text */
-.big { /* This is the class we created in the HTML file, you can use it to style any element */
+.big {
   font-size: 2.5em;
 }
 
 h2 {
   font-size: 1.75em;
 }
+
 .medium {
   font-size: 1.25em;
+  margin-top: 110px;
 }
 
 .small {
   font-size: 1.25em;
-  font-weight: normal; /* This removes the bold styling */
+  font-weight: normal;
 }
 
 /* Paragraph */
@@ -94,11 +90,10 @@ p {
 }
 
 section {
-  margin-bottom: 2.5em;  /* We want a little more space between sections */
+  margin-bottom: 2.5em;
 }
 
 /* Links */
-/* We want the links to be a little more visible  and a different color */
 a {
   color: #82277f !important;
   text-decoration: none;
@@ -107,25 +102,26 @@ a {
 a:hover {
   text-decoration: underline;
 }
-  
+
 /* Images */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Solve the container thing */
 figure {
-  width: 100%;
-  max-width: 500px;
+  width: 400px;
+  height: 300px;
 }
-
-/* Adding google font for header*/
 
 .dr-sugiyama-regular {
   font-family: "Dr Sugiyama", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+html {
+  overflow-y: scroll; /* This forces the scroll bar to always be visible */
 }
 
 
@@ -150,8 +146,7 @@ figure {
 
   nav {
     top: 100px;
-    font-size: 16px; /* Keep font size the same as desktop */
-    padding: 10px 0; /* Keep padding the same as desktop */
+    font-size: 16px;
   }
 
   .big {
@@ -164,6 +159,14 @@ figure {
 
   p {
     font-size: 15px;
+  }
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  figure {
+    max-width: 100%;
   }
 }
 
@@ -180,14 +183,16 @@ figure {
   }
 
   header {
-    font-size: 60px; /* Reduce header size slightly on smaller screens */
+    font-size: 60px;
     padding-top: 50px;
   }
 
   nav {
-    top: 140px; /* Adjust top position of the nav */
-    font-size: 16px; /* Keep nav font size smaller to avoid it growing */
-    padding: 10px 0; /* Keep consistent padding */
+    position: fixed;
+    top: 140px; /* Adjust top for mobile */
+    width: 100%; /* Ensure full width */
+    font-size: 16px;
+    padding: 10px 0;
   }
 
   .big {
@@ -209,12 +214,20 @@ figure {
   p {
     font-size: 16px;
   }
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  figure {
+    max-width: 100%;
+  }
 }
 
 /* Smaller mobile devices (up to 480px width) */
 @media (max-width: 480px) {
   header {
-    font-size: 50px; /* Keep header size consistent with smaller screens */
+    font-size: 50px;
     padding-top: 40px;
   }
 
@@ -224,11 +237,11 @@ figure {
   }
 
   nav {
-    position: relative;
-    top: 0; /* Adjust nav top position for smaller screens */
-    margin-top: 10px;
-    font-size: 15px; /* Reduce nav font size on smaller screens */
-    padding: 8px 0; /* Reduce nav padding on smaller screens */
+    position: fixed;
+    top: 180px;
+    width: 100%; /* Ensure full width */
+    font-size: 18px;
+    padding: 8px 0;
   }
 
   .big {
@@ -240,6 +253,14 @@ figure {
   }
 
   p {
-    font-size: 15px;
+    font-size: 18px;
+  }
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  figure {
+    max-width: 100%;
   }
 }
