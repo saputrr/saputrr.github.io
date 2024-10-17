@@ -83,6 +83,19 @@ h2 {
   font-weight: normal;
 }
 
+h5 {
+  font-size: 1.75em;
+  margin-top: 0;
+  color: rgb(117, 78, 153);
+}
+
+
+h4{
+  font-size: 18px;
+  color: rgb(117, 78, 153);
+  margin-bottom: 0;
+}
+
 /* Paragraph */
 p {
   margin-bottom: 1em;
