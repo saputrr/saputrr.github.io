@@ -252,7 +252,7 @@ html {
 
   nav {
     position: fixed;
-    top: 180px;
+    top: 200px;
     width: 100%; /* Ensure full width */
     font-size: 18px;
     padding: 8px 0;
