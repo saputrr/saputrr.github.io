@@ -1,0 +1,67 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 250,
+    "title": {
+      "text": "Regional GDP Growth",
+      "subtitle": ["% Constant", "Source: Statistics Indonesia", ""]
+    },
+    "params": [
+      {
+        "name": "selectedYear",
+        "value": 2011,
+        "bind": {
+          "input": "range",
+          "min": 2011,
+          "max": 2023,
+          "step": 1,
+          "name": "Year"
+        }
+      }
+    ],
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/IDN_rgdp.csv",
+      "format": { "type": "csv" }
+    },
+  
+    "transform": [
+      {
+        "filter": "datum.year == selectedYear"
+      },
+      {
+        "lookup": "province",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/id%20(1).json",
+            "format": { "property": "features" }
+          },
+          "key": "properties.name",
+          "fields": ["type", "geometry"]
+        }
+      },
+      {
+        "calculate": "datum.rgdp + ' %'",
+        "as": "rgdp_with_percent"
+      }
+    ],
+  
+    "projection": { "type": "mercator" },
+  
+    "mark": { "type": "geoshape" },
+  
+    "encoding": {
+      "color": {
+        "field": "rgdp",
+        "type": "quantitative",
+        "scale": { "scheme": "purplebluegreen", "domain": [-5, 10] },
+        "legend": { "title": "Regional GDP Growth" }
+      },
+      "tooltip": [
+        { "field": "province", "title": "Province" },
+        { "field": "rgdp_with_percent", "title": "Regional GDP Growth" },
+        { "field": "year", "title": "Year" }
+      ]
+    }
+  }
+  
