@@ -42,13 +42,44 @@
     <style>
         header {
             font-family: 'Dr Sugiyama', cursive; /* Apply Princess Sofia font */
-            color: #e2d3e2; /* Apply the custom color */
+            color: #5d265d; /* Apply the custom color */
             font-size: 60px; /* Adjust the font size */
         }
     /* Optional styling for the link */
         a {
             text-decoration: none; /* Remove underline from the link */
             color: rgb(240, 208, 235); /* Keep the text color the same as the header */
+        }
+        body {
+            font-family: 'Afacad Flux'
+        }
+
+        .collapsible {
+            background-color:  rgb(117, 78, 153);
+            color: white;
+            cursor: pointer;
+            padding: 0px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 2px;
+        }
+        .collapsible:hover {
+            background-color: rgb(76, 27, 122);
+        }
+        .collapsible.active {
+            background-color: rgb(76, 27, 122);
+        }
+
+        .section-content {
+            padding: 10px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            margin-top: 2px;
+            border-radius: 2px;
         }
     </style>
     
@@ -86,12 +117,16 @@
     </h3>
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <section>
+    <button class="collapsible"><h2>Week 1: Introduction</h2></button>
+        <div class="section-content">
+        <section>
         <div class="chart-description">
-            <style> h2{color: rgb(117, 78, 153);}</style>
-            <h2>Week 1: Introduction</h2>
-                       
+            <style> h2{color: white;font-family: 'Afacad Flux';}</style>
+                         
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                <strong> Coding Challenge 1 and 2.</strong>
+                
+                <br>
                 By the end of the lecture and seminar, I learned how to use GitHub, Visual Studio Code, and embed live charts into my website.
                 I also learned how to organise the page into sections, with each section containing a chart, title and a description. Here, I can describe the chart and give some context.
                 As a first example, I am using a basic chart from the existing repository.
@@ -103,6 +138,7 @@
         <p> Here, I embeded the chart which visualises the relationship between GDP per capita and life expectancy. I took this chart from <a href="https://www.economicsobservatory.com/explore">Economics Observatory</a> without any adjustments.</p>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
+    
 
     <section>
         <div class="chart-description">
@@ -121,10 +157,12 @@
             <p>And another chart from <a href="https://rdeconomist.github.io/library">Chart Library</a>. But sometimes it shows, sometimes it does not. I will take note and update why this glitch happens occasionally.</p>
         <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
-
-    <section>
+    </div>
+<br>
+    <button class="collapsible"><h2>Week 2: Playing with Vega-Lite Editor</h2></button>
+        <div class="section-content">
+        <section>
         <div class="chart-description">
-            <h2>Week 2: Playing with Vega-Lite Editor</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 Last week, I  learned how to copy and paste the chart from template to this website. This week, I learned how to customize charts using the <a href="vega.github.io/editor/">Vega Lite Editor</a>. Simple steps: I pick dataset from <a href="https://www.economicsobservatory.com/create">Economics Observatory</a>, then I copy-paste-customize the code in <a href="vega.github.io/editor/">Vega Lite Editor</a>. Since I am from Indonesia, I chose the data from this country. I will start with the basics: GDP growth. I customized the chart so that the colors and fonts match with the setting in my website.
             </p>
@@ -151,10 +189,13 @@
             <p>Interestingly, the current dataset reveals that Indonesia experienced deflation for five consecutive months. This is a rare occurence, even during Covid-19 pandemic. Some attribute it to declining purchasing power. But is that really the case?</p>
 
     </section>
+    </div>
 
+    <button class="collapsible"><h2>Week 3: Grammar of Graphics</h2></button>
+        <div class="section-content">
+    
     <section>
         <div class="chart-description">
-            <h2>Week 3: Grammar of Graphics</h2>
             <p> This week, we discussed visualisation as the language of data. We plotted Anscombe's quartet: where four datasets with nearly identical simple descriptive statistics appear very different when graphed. That shows the importance of visualisation.
             </p>
         </div>
@@ -169,14 +210,20 @@
             <h4><strong>Side Notes</strong></h4>
             <h5>Falling Behind: Is Social Mobility in the UK Really Improving?
             </h5>
-            <p> (work in progress).
+            <p> <strong>Coding Challenge 3. </strong>
+                <br>
+                Percentage of children whose family income at 30 years old was higher than their parents’ family income at 30 years old, by country and year of birth (‘birth cohort’).
             </p>
+            <figure id="Location13"></figure> 
         </div>
     </section>
+    </div>
+ 
+    <button class="collapsible"><h2>Week 4: Data</h2></button>
+    <div class="section-content">
 
       <section>
         <div class="chart-description">
-            <h2>Week 4: Data</h2>
             <p> We discussed briefly about the data: the types, sources, and also how to tidying up and scrapping data from html page. This week is quite though.</p>
         </div>
         <h3 class="small">
@@ -191,7 +238,8 @@
         </h3>
         
         <figure id="Location9"></figure> 
-        <p> I used python to clean and create the json file of the GDP per Capita chart. You can see the simple code in my repository (title: gdp_indonesia.ipynb).</p>
+        <p> <strong>Coding Challenge 5.</strong>
+            <br>I choose this site because it provides API and I can use pandas to do the scraping. I used python to clean and create the json file of the GDP per Capita chart. You can see the simple code in my repository (title: gdp_indonesia.ipynb).</p>
 
     </section>
     <section>
@@ -199,14 +247,17 @@
             <h4><strong>Side Notes</strong></h4>
             <h5>Recreating a Chart
             </h5>
-            <p> (work in progress).
+            <p> <strong>Coding Challenge 4</strong>
+                (work in progress).
             </p>
         </div>
     </section>
+    </div>
 
-    <section>
+    <button class="collapsible"><h2>Week 5: Programming</h2></button>
+        <div class="section-content">
+        <section>
         <div class="chart-description">
-            <h2>Week 5: Programming</h2>
             <p> We practiced how to clean data from API using Python, and turned it into a chart using Vega-Lite Editor.</p>
         </div>
         <h3 class="small">
@@ -215,31 +266,41 @@
         
         <figure id="Location10"></figure> 
         <p> I used Google Colab to clean the data from the World Bank API, and then use the Vega-Lite Editor to create the chart above.</p>
-
-
     </section>
+        </div>
+
+    <button class="collapsible"><h2>Week 6: Reading Week</h2></button>
+    <div class="section-content">
     <section>
         <div class="chart-description">
-            <h2>Week 6: Reading Week</h2>
-            <p> It's reading week. Yay.</p>
+            <p> It's reading week. I did the <strong>Coding Challenge 6</strong>.</p>
         </div>
     </section>
-    <section>
+    </div>
+
+    <button class="collapsible"><h2>Week 7: Map</h2></button>
+        <div class="section-content">
+        <section>
         <div class="chart-description">
-            <h2>Week 7: Map</h2>
             <p> We practiced how to create a choropleth map.</p>
         </div>
         <h3 class="small">
             <strong>Chart 10: The Price of a Pint</strong> 
         </h3>
         <figure id="Location11"></figure> 
-        <p>I have my own map for Indonesia regional GDP growth.</p>
-    </div>
+        <p>I have my own map for Indonesia regional GDP growth <strong>(Coding Challenge 7)</strong>.</p>
+        <h3 class="small">
+            <strong>Chart 11: Indonesia Map</strong> 
+        </h3>
+        <figure id="#Location14"></figure>  
+       
+        
     <h3 class="small">
-        <strong>Chart 11: Indonesia Regional GDP Growth</strong> 
+        <strong>Chart 12: Indonesia Regional GDP Growth</strong> 
     </h3>
     <figure id="Location12"></figure>  
     </section>
+    </div>
 
     
     <!-- Do you want to add more sections? -->
@@ -250,6 +311,15 @@
 
     <!-- This is a script, it's a way to run JavaScript code on the page -->
     <script>
+
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(button => {
+            button.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                content.style.display = (content.style.display === "block") ? "none" : "block";
+            });
+        });
         // This is a comment in JavaScript - it's a different language to HTML and CSS
 
         let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
@@ -276,8 +346,18 @@
         vegaEmbed('#Location10', 'chart_gdpco2pop.json')
         vegaEmbed('#Location11', 'chart_guinessprice.json')
         vegaEmbed('#Location12', 'chart_map.json')
+        vegaEmbed('#Location13', 'chart_mobilityUK.json')
+        vegaEmbed('#Location14', 'chart_IDNmap.json')
+
     </script>
     </div>
 </body>
     
+
+<br><br><br><br>
+<footer>
+    <p>R. Saputri © 2024 </p>
+</footer>
+
+
 </html>

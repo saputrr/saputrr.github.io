@@ -7,21 +7,21 @@ body {
   line-height: 1.6;
   background-color: #fff;
   margin: 0 auto;  /* Center body content */
-  max-width: 800px;
+  max-width: 850px;
   padding-top: 80px;
 }
 
 /* Header */
 header {
   font-family: 'Dr Sugiyama', cursive;
-  color: #ffc7fc;
+  color: #572555;
   font-size: 60px;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(31, 15, 24);
+  background-color:white;
   z-index: 1000;
   padding-top: 40px;
   padding-bottom: 0;
@@ -32,7 +32,7 @@ header .header-content {
 }
 
 header .header-content a {
-  color: rgb(246, 211, 234) !important;
+  color:  rgb(64, 44, 62) !important;
   text-decoration: none;
 }
 
@@ -96,6 +96,7 @@ h4{
   margin-bottom: 0;
 }
 
+
 /* Paragraph */
 p {
   margin-bottom: 1em;
@@ -115,6 +116,21 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* footer */
+footer {
+  width: 100%; /* Ensure nav takes full width */
+  background-color: rgb(207, 203, 203);
+  text-align: center;
+  font-family: 'Afacad Flux', Tahoma, sans-serif;
+  font-size: 12px;
+  display: inline-block;
+  }
+
+nav a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Images */
@@ -203,7 +219,7 @@ html {
 
   nav {
     position: fixed;
-    top: 140px; /* Adjust top for mobile */
+    top: 160px; /* Adjust top for mobile */
     width: 100%; /* Ensure full width */
     font-size: 16px;
     padding: 10px 0;
@@ -252,7 +268,7 @@ html {
 
   nav {
     position: fixed;
-    top: 220px;
+    top: 200px;
     width: 100%; /* Ensure full width */
     font-size: 18px;
     padding: 8px 0;
