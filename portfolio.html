@@ -55,8 +55,8 @@
         }
 
         .collapsible {
-            background-color:  rgb(117, 78, 153);
-            color: white;
+            background-color:  rgb(125, 109, 140);
+            color: rgb(45, 43, 43)!important;
             cursor: pointer;
             padding: 0px;
             border: none;
@@ -65,12 +65,24 @@
             font-size: 16px;
             width: 100%;
             border-radius: 2px;
+            display: flex;
+            justify-content: space-between;
+            transition: color 0.3s ease; background-color: 0.3s ease;
+        }
+        .collapsible .arrow {
+             transition: transform 0.3s ease;
+        }
+
+        .collapsible.active .arrow {
+             transform: rotate(180deg);
         }
         .collapsible:hover {
             background-color: rgb(76, 27, 122);
+            color: rgb(159, 159, 159)!important;
         }
         .collapsible.active {
             background-color: rgb(76, 27, 122);
+            color: rgb(159, 159, 159)!important;
         }
 
         .section-content {
@@ -117,16 +129,13 @@
     </h3>
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <button class="collapsible"><h2>Week 1: Introduction</h2></button>
+    <button class="collapsible"><h6>Week 1: Introduction (#CC1)</h6></button>
         <div class="section-content">
         <section>
         <div class="chart-description">
-            <style> h2{color: white;font-family: 'Afacad Flux';}</style>
+            <style> h6{font-family: 'Afacad Flux';}</style>
                          
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                <strong> Coding Challenge 1 and 2.</strong>
-                
-                <br>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->           
                 By the end of the lecture and seminar, I learned how to use GitHub, Visual Studio Code, and embed live charts into my website.
                 I also learned how to organise the page into sections, with each section containing a chart, title and a description. Here, I can describe the chart and give some context.
                 As a first example, I am using a basic chart from the existing repository.
@@ -158,8 +167,8 @@
         <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
     </div>
-<br>
-    <button class="collapsible"><h2>Week 2: Playing with Vega-Lite Editor</h2></button>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 2: Playing with Vega-Lite Editor (#CC2)</h6></button>
         <div class="section-content">
         <section>
         <div class="chart-description">
@@ -190,8 +199,8 @@
 
     </section>
     </div>
-
-    <button class="collapsible"><h2>Week 3: Grammar of Graphics</h2></button>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 3: Grammar of Graphics (#CC3)</h6></button>
         <div class="section-content">
     
     <section>
@@ -210,16 +219,15 @@
             <h4><strong>Side Notes</strong></h4>
             <h5>Falling Behind: Is Social Mobility in the UK Really Improving?
             </h5>
-            <p> <strong>Coding Challenge 3. </strong>
-                <br>
+            <p>
                 Percentage of children whose family income at 30 years old was higher than their parents’ family income at 30 years old, by country and year of birth (‘birth cohort’).
             </p>
             <figure id="Location13"></figure> 
         </div>
     </section>
     </div>
- 
-    <button class="collapsible"><h2>Week 4: Data</h2></button>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 4: Data (#CC4 and #CC5)</h6></button>
     <div class="section-content">
 
       <section>
@@ -247,29 +255,39 @@
             <h4><strong>Side Notes</strong></h4>
             <h5>Recreating a Chart
             </h5>
-            <p> <strong>Coding Challenge 4</strong>
-                (work in progress).
+            <p> I found an interesting website for my #CC4 <a href="https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368">here</a>. The writer of that blog is the visual data journalist at The Economist and she gave up redesigning this chart. This sounds like a challenge!
+                
+                <img 
+                src="https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/1_7GJIxnYsyFSGgQV537Ittg.webp" 
+                alt="Example Image" 
+                width="600">
+                <br>
+                This is indeed a challenge if we want to try to publish it in printed version. However, with the website version, I think interactive chart can be the answer. I chose to apply a tickbox in the chart, so the reader can choose what they want to see.
+                <h3 class="small">
+                    <strong>Chart 9: Women in Academics World</strong> 
+                </h3>
+                <figure id="Location15"></figure>
             </p>
         </div>
     </section>
     </div>
-
-    <button class="collapsible"><h2>Week 5: Programming</h2></button>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 5: Programming</h6></button>
         <div class="section-content">
         <section>
         <div class="chart-description">
             <p> We practiced how to clean data from API using Python, and turned it into a chart using Vega-Lite Editor.</p>
         </div>
         <h3 class="small">
-            <strong>Chart 9: The Economy and The Environment</strong> 
+            <strong>Chart 10: The Economy and The Environment</strong> 
         </h3>
         
         <figure id="Location10"></figure> 
         <p> I used Google Colab to clean the data from the World Bank API, and then use the Vega-Lite Editor to create the chart above.</p>
     </section>
         </div>
-
-    <button class="collapsible"><h2>Week 6: Reading Week</h2></button>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 6: Reading Week (#CC6)</h6></button>
     <div class="section-content">
     <section>
         <div class="chart-description">
@@ -277,32 +295,63 @@
         </div>
     </section>
     </div>
-
-    <button class="collapsible"><h2>Week 7: Map</h2></button>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 7: Map (#CC7)</h6></button>
         <div class="section-content">
         <section>
         <div class="chart-description">
             <p> We practiced how to create a choropleth map.</p>
         </div>
         <h3 class="small">
-            <strong>Chart 10: The Price of a Pint</strong> 
+            <strong>Chart 11: The Price of a Pint</strong> 
         </h3>
         <figure id="Location11"></figure> 
         <p>I have my own map for Indonesia regional GDP growth <strong>(Coding Challenge 7)</strong>.</p>
         <h3 class="small">
-            <strong>Chart 11: Indonesia Map</strong> 
+            <strong>Chart 12: Indonesia Map</strong> 
         </h3>
         <figure id="#Location14"></figure>  
        
         
     <h3 class="small">
-        <strong>Chart 12: Indonesia Regional GDP Growth</strong> 
+        <strong>Chart 13: Indonesia Regional GDP Growth</strong> 
     </h3>
     <figure id="Location12"></figure>  
     </section>
     </div>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 8: Big Data (#CC8)</h6></button>
+        <div class="section-content">
+        <section>
+        <div class="chart-description">
+          
+    </section>
+    </div>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 9: Advanced Analysis (#CC9)</h6></button>
+    <div class="section-content">
+    <section>
+    <div class="chart-description">
+      
+    </section>
+    </div>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 10: Interactive Visualisation (#CC10)</h6></button>
+    <div class="section-content">
+    <section>
+    <div class="chart-description">
+      
+    </section>
+    </div>
+    <div style="height: 2px;"></div>
+    <button class="collapsible"><h6>Week 11: Large Language Model</h6></button>
+        <div class="section-content">
+        <section>
+        <div class="chart-description">
+          
+    </section>
+    </div>
 
-    
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
