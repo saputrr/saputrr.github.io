@@ -1,0 +1,221 @@
+year,category,currency,value
+2014,poor,idr,0
+2014,poor,idr,302735
+2014,poor,usd ppp,0
+2014,poor,usd ppp,2.093666667
+2014,vulnerable,idr,302735
+2014,vulnerable,idr,454102.5
+2014,vulnerable,usd ppp,2.093666667
+2014,vulnerable,usd ppp,3.140500001
+2014,amc,idr,454102.5
+2014,amc,idr,1059572.5
+2014,amc,usd ppp,3.140500001
+2014,amc,usd ppp,7.327833334499999
+2014,mc,idr,1059572.5
+2014,mc,idr,5146495
+2014,mc,usd ppp,7.327833334499999
+2014,mc,usd ppp,35.59233334
+2014,uc,idr,5146495
+2014,uc,idr,inf
+2014,uc,usd ppp,35.59233334
+2014,uc,usd ppp,inf
+2015,poor,idr,0
+2015,poor,idr,330776
+2015,poor,usd ppp,0
+2015,poor,usd ppp,2.287666667
+2015,vulnerable,idr,330776
+2015,vulnerable,idr,496164
+2015,vulnerable,usd ppp,2.287666667
+2015,vulnerable,usd ppp,3.431500001
+2015,amc,idr,496164
+2015,amc,idr,1157716
+2015,amc,usd ppp,3.431500001
+2015,amc,usd ppp,8.006833335
+2015,mc,idr,1157716
+2015,mc,idr,5623192
+2015,mc,usd ppp,8.006833335
+2015,mc,usd ppp,38.890333338999994
+2015,uc,idr,5623192
+2015,uc,idr,inf
+2015,uc,usd ppp,38.890333338999994
+2015,uc,usd ppp,inf
+2016,poor,idr,0
+2016,poor,idr,354386
+2016,poor,usd ppp,0
+2016,poor,usd ppp,2.451
+2016,vulnerable,idr,354386
+2016,vulnerable,idr,531579
+2016,vulnerable,usd ppp,2.451
+2016,vulnerable,usd ppp,3.6765
+2016,amc,idr,531579
+2016,amc,idr,1240351
+2016,amc,usd ppp,3.6765
+2016,amc,usd ppp,8.5785
+2016,mc,idr,1240351
+2016,mc,idr,6024562
+2016,mc,usd ppp,8.5785
+2016,mc,usd ppp,41.667
+2016,uc,idr,6024562
+2016,uc,idr,inf
+2016,uc,usd ppp,41.667
+2016,uc,usd ppp,inf
+2017,poor,idr,0
+2017,poor,idr,374478
+2017,poor,usd ppp,0
+2017,poor,usd ppp,2.59
+2017,vulnerable,idr,374478
+2017,vulnerable,idr,561717
+2017,vulnerable,usd ppp,2.59
+2017,vulnerable,usd ppp,3.885
+2017,amc,idr,561717
+2017,amc,idr,1310673
+2017,amc,usd ppp,3.885
+2017,amc,usd ppp,9.065
+2017,mc,idr,1310673
+2017,mc,idr,6366126
+2017,mc,usd ppp,9.065
+2017,mc,usd ppp,44.03
+2017,uc,idr,6366126
+2017,uc,idr,inf
+2017,uc,usd ppp,44.03
+2017,uc,usd ppp,inf
+2018,poor,idr,0
+2018,poor,idr,401220
+2018,poor,usd ppp,0
+2018,poor,usd ppp,2.774666667
+2018,vulnerable,idr,401220
+2018,vulnerable,idr,601830
+2018,vulnerable,usd ppp,2.774666667
+2018,vulnerable,usd ppp,4.162000001
+2018,amc,idr,601830
+2018,amc,idr,1404270
+2018,amc,usd ppp,4.162000001
+2018,amc,usd ppp,9.711333335
+2018,mc,idr,1404270
+2018,mc,idr,6820740
+2018,mc,usd ppp,9.711333335
+2018,mc,usd ppp,47.16933334
+2018,uc,idr,6820740
+2018,uc,idr,inf
+2018,uc,usd ppp,47.16933334
+2018,uc,usd ppp,inf
+2019,poor,idr,0
+2019,poor,idr,425250
+2019,poor,usd ppp,0
+2019,poor,usd ppp,2.941
+2019,vulnerable,idr,425250
+2019,vulnerable,idr,637875
+2019,vulnerable,usd ppp,2.941
+2019,vulnerable,usd ppp,4.4115
+2019,amc,idr,637875
+2019,amc,idr,1488375
+2019,amc,usd ppp,4.4115
+2019,amc,usd ppp,10.2935
+2019,mc,idr,1488375
+2019,mc,idr,7229250
+2019,mc,usd ppp,10.2935
+2019,mc,usd ppp,49.997
+2019,uc,idr,7229250
+2019,uc,idr,inf
+2019,uc,usd ppp,49.997
+2019,uc,usd ppp,inf
+2020,poor,idr,0
+2020,poor,idr,454652
+2020,poor,usd ppp,0
+2020,poor,usd ppp,3.144333333
+2020,vulnerable,idr,454652
+2020,vulnerable,idr,681978
+2020,vulnerable,usd ppp,3.144333333
+2020,vulnerable,usd ppp,4.7165
+2020,amc,idr,681978
+2020,amc,idr,1591282
+2020,amc,usd ppp,4.7165
+2020,amc,usd ppp,11.005166665500001
+2020,mc,idr,1591282
+2020,mc,idr,7729084
+2020,mc,usd ppp,11.005166665500001
+2020,mc,usd ppp,53.45366666
+2020,uc,idr,7729084
+2020,uc,idr,inf
+2020,uc,usd ppp,53.45366666
+2020,uc,usd ppp,inf
+2021,poor,idr,0
+2021,poor,idr,472525
+2021,poor,usd ppp,0
+2021,poor,usd ppp,3.268
+2021,vulnerable,idr,472525
+2021,vulnerable,idr,708787.5
+2021,vulnerable,usd ppp,3.268
+2021,vulnerable,usd ppp,4.901999999999999
+2021,amc,idr,708787.5
+2021,amc,idr,1653837.5
+2021,amc,usd ppp,4.901999999999999
+2021,amc,usd ppp,11.437999999999999
+2021,mc,idr,1653837.5
+2021,mc,idr,8032925
+2021,mc,usd ppp,11.437999999999999
+2021,mc,usd ppp,55.556
+2021,uc,idr,8032925
+2021,uc,idr,inf
+2021,uc,usd ppp,55.556
+2021,uc,usd ppp,inf
+2022,poor,idr,0
+2022,poor,idr,505469
+2022,poor,usd ppp,0
+2022,poor,usd ppp,3.495666667
+2022,vulnerable,idr,505469
+2022,vulnerable,idr,758203.5
+2022,vulnerable,usd ppp,3.495666667
+2022,vulnerable,usd ppp,5.243500001
+2022,amc,idr,758203.5
+2022,amc,idr,1769141.5
+2022,amc,usd ppp,5.243500001
+2022,amc,usd ppp,12.23483333
+2022,mc,idr,1769141.5
+2022,mc,idr,8592973
+2022,mc,usd ppp,12.23483333
+2022,mc,usd ppp,59.42633334
+2022,uc,idr,8592973
+2022,uc,idr,inf
+2022,uc,usd ppp,59.42633334
+2022,uc,usd ppp,inf
+2023,poor,idr,0
+2023,poor,idr,550458
+2023,poor,usd ppp,0
+2023,poor,usd ppp,3.807
+2023,vulnerable,idr,550458
+2023,vulnerable,idr,825687
+2023,vulnerable,usd ppp,3.807
+2023,vulnerable,usd ppp,5.7105
+2023,amc,idr,825687
+2023,amc,idr,1926603
+2023,amc,usd ppp,5.7105
+2023,amc,usd ppp,13.3245
+2023,mc,idr,1926603
+2023,mc,idr,9357786
+2023,mc,usd ppp,13.3245
+2023,mc,usd ppp,64.719
+2023,uc,idr,9357786
+2023,uc,idr,inf
+2023,uc,usd ppp,64.719
+2023,uc,usd ppp,inf
+2024,poor,idr,0
+2024,poor,idr,582932
+2024,poor,usd ppp,0
+2024,poor,usd ppp,4.031666667
+2024,vulnerable,idr,582932
+2024,vulnerable,idr,874398
+2024,vulnerable,usd ppp,4.031666667
+2024,vulnerable,usd ppp,6.0475000004999995
+2024,amc,idr,874398
+2024,amc,idr,2040262
+2024,amc,usd ppp,6.0475000004999995
+2024,amc,usd ppp,14.110833334499999
+2024,mc,idr,2040262
+2024,mc,idr,9909844
+2024,mc,usd ppp,14.110833334499999
+2024,mc,usd ppp,68.53833333899999
+2024,uc,idr,9909844
+2024,uc,idr,inf
+2024,uc,usd ppp,68.53833333899999
+2024,uc,usd ppp,inf
