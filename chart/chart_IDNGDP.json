@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "GDP growth",
+    "anchor": "start",
+    "subtitle": "% YoY | Source: BPS through ECO API",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "font": "Afacad Flux",
+    "color": "rgb(117, 78, 153)",
+    "subtitleColor": "#333333"
+  },
+  "height": 300,
+  "width": "container",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "#ffffff",
+  "view": {
+    "fill": "#ffffff",
+    "strokeOpacity": 0
+  },
+  "data": {
+    "url": "https://api.economicsobservatory.com/idn/grow?vega",
+    "format": {
+      "type": "json"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "rgb(117, 78, 153)",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "axis": {
+            "title": "",
+            "titleColor": "#333333",
+            "grid": false,
+            "labelFont": "Afacad Flux",
+            "labelColor": "#333333"
+          }
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "axis": {
+            "title": "",
+            "titleColor": "#333333",
+            "grid": false,
+            "labelFont": "Afacad Flux",
+            "labelColor": "#333333"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "rgb(117, 78, 153)",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "datum": 0,
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFont": "Afacad Flux",
+      "titleFont": "Afacad Flux"
+    },
+    "legend": {
+      "labelFont": "Afacad Flux",
+      "titleFont": "Afacad Flux"
+    }
+  }
+}

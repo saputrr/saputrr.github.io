@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/incomeclass.csv"
+  },
+  "title": {
+    "text": "Share of Income Class",
+    "anchor": "start",
+    "subtitle": ["%, BPS, author calculation"],
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "font": "Plus Jakarta Sans",
+    "color": "rgb(117, 78, 153)",
+    "subtitleColor": "#333333"
+  },
+  "transform": [
+    {
+      "filter": "datum.type === 'share'"
+    },
+    {
+      "window": [{"op": "rank", "as": "index"}],
+      "groupby": ["category", "term"],
+      "sort": [{"field": "year", "order": "ascending"}]
+    },
+    {
+      "lookup": "category",
+      "from": {
+        "data": {
+          "values": [
+            {"category": "amc", "custom_category": "Aspiring Middle Class"},
+            {"category": "poor", "custom_category": "Poor"},
+            {"category": "vulnerable", "custom_category": "Vulnerable"},
+            {"category": "mc", "custom_category": "Middle Class"},
+            {"category": "uc", "custom_category": "Upper Class"}
+          ]
+        },
+        "key": "category",
+        "fields": ["custom_category"]
+      }
+    },
+    {
+      "calculate": "datum.value * 100", 
+      "as": "value_percentage"
+    }
+  ],
+  "facet": {
+    "field": "custom_category",
+    "type": "nominal",
+    "sort": [
+      "Poor",
+      "Vulnerable",
+      "Aspiring Middle Class",
+      "Middle Class",
+      "Upper Class"
+    ],
+    "title": " "
+  },
+  "spec": {
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "strokeWidth": 2
+        },
+        "encoding": {
+          "x": {
+            "field": "index",
+            "type": "ordinal",
+            "title": "Year in the term"
+          },
+          "y": {
+            "field": "value_percentage",
+            "type": "quantitative",
+            "title": "Value",
+            "axis": {
+              "format": ".1f",
+              "formatType": "number",
+              "title": "Share (%)"
+            }
+          },
+          "color": {
+            "field": "term",
+            "type": "nominal",
+            "title": "Term",
+            "scale": {
+              "domain": ["1", "2"],
+              "range": ["rgb(117, 78, 153)", "red"]
+            }
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "strokeWidth": 6,
+          "stroke": "transparent",
+          "tooltip": true
+        },
+        "encoding": {
+          "x": {
+            "field": "index",
+            "type": "ordinal"
+          },
+          "y": {
+            "field": "value_percentage",
+            "type": "quantitative"
+          }
+        }
+      }
+    ],
+    "encoding": {
+      "tooltip": [
+        {"field": "year", "type": "ordinal", "title": "Year"},
+        {"field": "value_percentage", "type": "quantitative", "title": "Share (%)", "format": ".1f"}
+      ]
+    }
+  },
+  "config": {
+    "facet": {
+      "spacing": 10
+    },
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}

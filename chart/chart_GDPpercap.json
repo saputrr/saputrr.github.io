@@ -1,0 +1,256 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+"height": 300,
+"width": "container",
+    "data": {
+      "name": "data-27bd0b3d1f599c7a0efcb0001a60cb7a"
+    },
+    "title": {
+      "text": "Indonesia GDP per Capita",
+      "anchor": "start",
+      "subtitle": ["PPP ($ current), Source: World Bank","",""],
+      "fontSize": 16,
+      "subtitleFontSize": 12,
+      "font": "Afacad Flux",
+      "color": "rgb(117, 78, 153)",
+      "subtitleColor": "#333333"
+    },
+    "datasets": {
+      "data-27bd0b3d1f599c7a0efcb0001a60cb7a": [
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 3070.264554,
+          "year": "1990"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 3330.632075,
+          "year": "1991"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 3566.357955,
+          "year": "1992"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 3823.607598,
+          "year": "1993"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 4130.948987,
+          "year": "1994"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 4490.264746,
+          "year": "1995"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 4850.790798,
+          "year": "1996"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 5084.191936,
+          "year": "1997"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 4397.090203,
+          "year": "1998"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 4427.674474,
+          "year": "1999"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 4682.496616,
+          "year": "2000"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 4892.895213,
+          "year": "2001"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 5121.673837,
+          "year": "2002"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 5399.724306,
+          "year": "2003"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 5750.204743,
+          "year": "2004"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 6189.56886,
+          "year": "2005"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 6644.53394,
+          "year": "2006"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 7162.984355,
+          "year": "2007"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 7639.919098,
+          "year": "2008"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 7941.243696,
+          "year": "2009"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 8431.821765,
+          "year": "2010"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 9022.72138,
+          "year": "2011"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 9624.588232,
+          "year": "2012"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 9966.382935,
+          "year": "2013"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 10168.67606,
+          "year": "2014"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 10132.31608,
+          "year": "2015"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 10371.44233,
+          "year": "2016"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 10802.7126,
+          "year": "2017"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 11494.94485,
+          "year": "2018"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 12115.70207,
+          "year": "2019"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 11856.94333,
+          "year": "2020"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 12897.10314,
+          "year": "2021"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 14445.64316,
+          "year": "2022"
+        },
+        {
+          "code": "IDN",
+          "country": "Indonesia",
+          "value": 15612.79912,
+          "year": "2023"
+        }
+      ]
+    },
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "nominal",
+        "axis": {
+              "title": "",
+              "titleColor": "#333333",
+              "grid": false,
+              "labelFont": "Afacad Flux",
+              "labelColor": "#333333",
+              "labelExpr": "datum.value % 2 === 0 ? datum.value : ''"
+            
+      }},
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "axis": {
+              "title": "",
+              "titleColor": "#333333",
+              "grid": false,
+              "labelFont": "Afacad Flux",
+              "labelColor": "#333333"
+        }
+      }
+    },
+    "mark": {"type":"line",
+    "color": "rgb(117, 78, 153)",
+    "strokeWidth": 2}
+  
+  }

@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 250,
+    "title": {
+      "text": "Indonesia Map",
+      "subtitle": ["The base map of Indonesia by Province", ""]
+    },
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/id%20(1).json",
+      "format": { "property": "features" }
+    },
+  
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/id%20(1).json",
+            "format": { "property": "features" }
+          },
+          "key": "properties.name",
+          "fields": ["type", "geometry"]
+        }
+      }
+      
+    ],
+  
+    "projection": { "type": "mercator" },
+  
+    "mark": { "type": "geoshape" },
+  
+    "encoding": {
+       "color": {
+      "value": "rgb(117, 78, 153)"
+    },
+      "tooltip": [
+        { "field": "properties.name", "title": "Province" }
+      ]
+    }
+  }
+  

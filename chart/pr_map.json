@@ -1,0 +1,121 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 250,
+    "title": {
+      "text": "Middle Class: Spatial Views",
+      "subtitle": ["(Statistics Indonesia, author calculation)", ""]
+    },
+    "params": [
+      {
+        "name": "selectedYear",
+        "value": 2014,
+        "bind": {
+          "input": "range",
+          "min": 2014,
+          "max": 2024,
+          "step": 1,
+          "name": "Year"
+        }
+      },
+      {
+        "name": "dataset",
+        "value": "National Middle Class Distribution",
+        "bind": {
+          "input": "select",
+          "options": ["National Distribution", "Share in Provinces"],
+          "name": "Dataset "
+        }
+      }
+    ],
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/provincenat_df.csv",
+          "format": { "type": "csv" }
+        },
+        "transform": [
+          {
+            "filter": "datum.year == selectedYear && datum.category == 'mc' && dataset === 'National Distribution'"
+          },
+          {
+            "lookup": "province",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/id%20(1).json",
+                "format": { "property": "features" }
+              },
+              "key": "properties.name",
+              "fields": ["type", "geometry"]
+            }
+          },
+          {
+            "calculate": "datum.value * 100",
+            "as": "percentValue"
+          },
+          {
+            "calculate": "format(datum.percentValue, '.1f') + ' %'",
+            "as": "percentTooltip"
+          }
+        ],
+        "mark": { "type": "geoshape" },
+        "encoding": {
+          "color": {
+            "field": "value",
+            "type": "quantitative",
+            "scale": { "scheme": "redpurple"},
+            "legend": { "title": "Share of Middle Class" }
+          },
+          "tooltip": [
+            { "field": "province", "title": "Province" },
+            { "field": "percentTooltip", "title": "Share of Middle Class" },
+            { "field": "year", "title": "Year" }
+          ]
+        }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/province_data.csv",
+          "format": { "type": "csv" }
+        },
+        "transform": [
+          {
+            "filter": "datum.year == selectedYear && datum.category == 'mc' && dataset === 'Share in Provinces'"
+          },
+          {
+            "lookup": "province",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/id%20(1).json",
+                "format": { "property": "features" }
+              },
+              "key": "properties.name",
+              "fields": ["type", "geometry"]
+            }
+          },
+          {
+            "calculate": "datum.value * 100",
+            "as": "percentValue"
+          },
+          {
+            "calculate": "format(datum.percentValue, '.1f') + ' %'",
+            "as": "percentTooltip"
+          }
+        ],
+        "mark": { "type": "geoshape" },
+        "encoding": {
+          "color": {
+            "field": "value",
+            "type": "quantitative",
+            "scale": { "scheme": "redpurple"},
+            "legend": { "title": "Share of Middle Class" }
+          },
+          "tooltip": [
+            { "field": "province", "title": "Province" },
+            { "field": "percentTooltip", "title": "Share of Middle Class" },
+            { "field": "year", "title": "Year" }
+          ]
+        }
+      }
+    ]
+  }

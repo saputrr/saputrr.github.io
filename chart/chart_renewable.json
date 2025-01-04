@@ -1,0 +1,54 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Indonesian Renewable ",
+    
+       "title": {
+          "text": "Renewable Energy in Indonesia",
+          "subtitle":["Million metric tons of oil equivalent","(Source: EIA via API)",""],
+          "subtitleFontStyle":"italic",
+          "fontSize": 16,
+          "subtitleFontSize": 12,
+          "font": "Afacad Flux",
+          "color": "rgb(117, 78, 153)",
+          "subtitleColor": "#333333",
+          "anchor": "start"},
+    "height": 300,
+    "width": "container",
+    "autosize": {
+    "type": "fit",
+    "contains": "padding"
+    },
+    
+    "data": {
+      "url": "https://api.eia.gov/v2/international/data/?frequency=annual&data[0]=value&facets[countryRegionId][]=IDN&facets[productId][]=29&facets[unit][]=MTOE&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=e4Wn9Zl46EayJGFFhs754VlcWxsC5Yf5ZNyubFCS",
+      "format":{
+        "type": "json",
+        "property": "response.data"
+      }
+    },
+    "mark": {"type": "line","color": "rgb(117, 78, 153)"},
+    "encoding": {
+      "x": {"field": "period", 
+            "type": "temporal", 
+            "title":"",
+            "axis": {
+                "title": "",
+                "titleColor": "#333333",
+                "grid": false,
+                "labelFont": "Afacad Flux",
+                "labelColor": "#333333"
+                  }
+             },
+      "y": {"field": "value", 
+            "type": "quantitative", 
+            "title":"",
+            "axis": {
+                "title": "",
+                "titleColor": "#333333",
+                "grid": false,
+                "labelFont": "Afacad Flux",
+                "labelColor": "#333333"
+                  }}
+    }
+  }
+  

@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   
+    "description": "Anscombe Example",
+  
+     "title": {
+        "text": "Anscombe Example",
+        "subtitle":["Policy (X) and Impact Measure (Y)",""],
+        "subtitleFontStyle":"italic",
+        "fontSize": 16,
+        "subtitleFontSize": 12,
+        "font": "Afacad Flux",
+        "color": "rgb(117, 78, 153)",
+        "subtitleColor": "#333333",
+        "anchor": "start"},
+  
+      "config": {
+      "background":"white",
+      "view": {
+        "stroke": "transparent"}},
+  
+    
+   
+    "data": {"url": "https://raw.githubusercontent.com/saputrr/saputrr.github.io/refs/heads/main/anscombesQuartet.csv"},
+   
+    "mark": {
+      "type":"point",
+      "color":"rgb(117, 78, 153)",
+      "size":100},
+  
+    "height":150,
+    "width":150,
+   
+    "encoding": {
+      "x": {
+        "field": "policyX", 
+        "type": "quantitative",
+        "title":"Policy",
+        "axis": {
+          "title": "Policy",
+          "grid": true}
+          },
+  
+      "y": {
+        "field": "impactY", 
+        "type": "quantitative",
+        "title":"Impact",
+        "axis":{
+          "grid": true}
+        },
+      "facet":{
+        "field":"Dataset",
+        "type": "nominal",
+        "columns": 2,
+        "title":null
+      }, 
+      "tooltip":
+      [{"field":"areaName", "title":"Area"}]
+     }
+  }
