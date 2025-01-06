@@ -1,0 +1,398 @@
+/* saputrr.github.io CSS basic*/
+
+body {
+	font-family: 'Afacad Flux', Tahoma, Geneva, Verdana, sans-serif, Arial, sans-serif;
+	font-size: 16px;
+	color: #333;
+	line-height: 1.6;
+	background-color: #fff;
+	margin: 0 auto;  /* Center body content */
+	max-width: 850px;
+	padding-top: 80px;
+  }
+  
+  /* Header */
+  header {
+	font-family: 'Dr Sugiyama', cursive;
+	color: #572555;
+	font-size: 60px;
+	position: sticky;
+	top: 0 !important;
+	left: 0px;
+	width: 100%;
+	margin: 0;
+	background-color:white;
+	z-index: 999;
+	padding-bottom: 0;
+	}
+  
+  /*header .header-content {
+	padding-left: 200px; /* Leave this here if necessary 
+  }*/
+  
+  header .header-content a {
+	color:  rgb(64, 44, 62) !important;
+	text-decoration: none;
+  }
+  
+  /* Navigation bar */
+  nav {
+	position: sticky;
+	top: 96px;
+	width: 100%; /* Ensure nav takes full width */
+	background-color: rgb(207, 203, 203);
+	z-index: 1000;
+	text-align: left;
+	font-family: 'Afacad Flux', Tahoma, sans-serif;
+	font-size: 16px;
+	color: #82277f;
+	display: inline-block;
+	margin: 0;
+	padding-top: 0;
+  }
+  
+  nav a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+	color: #333;
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+  }
+  
+  .big {
+	font-size: 2.5em;
+  }
+  
+  h2 {
+	font-size: 1.75em;
+  }
+  
+  .medium {
+	font-size: 1.25em;
+	margin-top: 40px;
+  }
+  
+  .small {
+	font-size: 1.25em;
+	font-weight: normal;
+  }
+  
+  h5 {
+	font-size: 1.75em;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: rgb(117, 78, 153);
+  }
+  
+  
+  h4{
+	font-size: 18px;
+	color: rgb(117, 78, 153);
+	margin-bottom: 0;
+	margin-bottom: 0;
+  }
+  
+  h6{
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	margin-top: 2;
+	margin-bottom: 2;
+	margin-left: 10px;
+	font-weight: bold;
+  }
+  
+  /* Paragraph */
+  p {
+	margin-bottom: 1em;
+	font-weight: 350;
+	font-size: 17px;
+  }
+  
+  section {
+	margin-bottom: 2.5em;
+  }
+  
+  /* Links */
+  a {
+	color: #82277f !important;
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  /* footer */
+  footer {
+	width: 100%; /* Ensure nav takes full width */
+	background-color: rgb(207, 203, 203);
+	text-align: center;
+	font-family: 'Afacad Flux', Tahoma, sans-serif;
+	font-size: 12px;
+	display: inline-block;
+	}
+  
+  nav a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  /* Images */
+  img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  figure {
+	width: 400px;
+	height: 300px;
+  }
+  
+  .dr-sugiyama-regular {
+	font-family: "Dr Sugiyama", serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+  html {
+	overflow-y: scroll; /* This forces the scroll bar to always be visible */
+  }
+  
+  .styled-box {
+	background-color: rgb(247, 247, 247); /* Light gray background */
+	border-left: 2pt solid black; /* Black border on the left */
+	padding: 10px; /* Inner spacing */
+	border-radius: 5px; /* Slightly rounded corners */
+	margin-top: 10px; /* Space above the box */
+	font-size: 14px; /* Adjust font size if needed */
+  }
+
+  
+  #vis {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  #vis::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and newer Edge */
+  }
+
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Breakpoint for larger tablets and small desktop screens */
+  @media (max-width: 1024px) {
+	body {
+	  margin: 0 50px;
+	  max-width: 100%;
+	  padding-top: 100px;
+	}
+  
+	header .header-content {
+	  padding-left: 20px;
+	}
+  
+	header {
+	  font-size: 60px;
+	  padding-top: 50px;
+	}
+  
+	nav {
+	  position: sticky;
+	  top: 140px; /* Adjust top for mobile */
+	  width: 100%; /* Ensure full width */
+	  font-size: 16px;
+	}
+  
+	.big {
+	  font-size: 2em;
+	}
+  
+	h2 {
+	  font-size: 1.5em;
+	}
+  
+	.medium {
+	  font-size: 1.2em;
+	}
+  
+	.small {
+	  font-size: 1.1em;
+	}
+  
+	p {
+	  font-size: 16px;
+	}
+	/* Images */
+	img {
+	  max-width: 100%;
+	  height: auto;
+	}
+	figure {
+	  max-width: 100%;
+	}
+  }
+  #vis{
+    max-width: 1000px;
+}
+  
+  /* Mobile (up to 768px width)
+  @media (max-width: 768px) {
+	body {
+	  margin: 0 20px;
+	  max-width: 100%;
+	  padding-top: 100px;
+	}
+  
+	header .header-content {
+	  padding-left: 20px;
+	}
+  
+	header {
+	  font-size: 60px;
+	  padding-top: 50px;
+	}
+  
+	nav {
+	  position: fixed;
+	  top: 160px; /* Adjust top for mobile 
+	  width: 100%; /* Ensure full width 
+	  font-size: 16px;
+	  padding: 10px 0;
+	}
+  
+	.big {
+	  font-size: 2em;
+	}
+  
+	h2 {
+	  font-size: 1.5em;
+	}
+  
+	.medium {
+	  font-size: 1.2em;
+	}
+  
+	.small {
+	  font-size: 1.1em;
+	}
+  
+	p {
+	  font-size: 16px;
+	}
+	/* Images
+	img {
+	  max-width: 100%;
+	  height: auto;
+	}
+	figure {
+	  max-width: 100%;
+	}
+  }*/
+  
+  /* Half screen */
+  @media (max-width: 900px) {
+	body {
+	  max-width: 100%;
+	  padding-top: 100px;
+	}
+  
+	header .header-content {
+	  padding-left: 20px;
+	}
+  
+	header {
+	  font-size: 60px;
+	  padding-top: 50px;
+	}
+  
+	nav {
+	  position: sticky;
+	  top: 140px; /* Adjust top for mobile */
+	  width: 100%; /* Ensure full width */
+	  font-size: 16px;
+	}
+  
+	.big {
+	  font-size: 2em;
+	}
+  
+	h2 {
+	  font-size: 1.5em;
+	}
+  
+	.medium {
+	  font-size: 1.2em;
+	}
+  
+	.small {
+	  font-size: 1.1em;
+	}
+  
+	p {
+	  font-size: 16px;
+	}
+	/* Images */
+	img {
+	  max-width: 100%;
+	  height: auto;
+	}
+	figure {
+	  max-width: 100%;
+	}
+  }
+  #vis{
+    max-width: 80%;
+}
+  
+  /* Smaller mobile devices (up to 480px width) */
+  @media (max-width: 480px) {
+	header {
+	  font-size: 50px;
+	  padding-top: 40px;
+	}
+  
+	body {
+	  padding-top: 120px;
+	  margin: 0 10px;
+	}
+  
+	nav {
+	  position: fixed;
+	  top: 200px;
+	  width: 100%; /* Ensure full width */
+	  font-size: 18px;
+	  padding: 8px 0;
+	}
+  
+	.big {
+	  font-size: 1.8em;
+	}
+  
+	h2 {
+	  font-size: 1.4em;
+	}
+  
+	p {
+	  font-size: 18px;
+	}
+	/* Images */
+	img {
+	  max-width: 100%;
+	  height: auto;
+	}
+	figure {
+	  max-width: 100%;
+	}
+  }
+  #vis{
+    max-width: 80%;
+}
