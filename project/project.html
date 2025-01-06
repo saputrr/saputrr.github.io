@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html> 
+    <!-- HTML is heirarchial: tags like this define elements on the page. 
+    Each tag does something different. For example:
+        - The <html> tag defines the whole document.
+        - The <h1> tag defines a large heading
+        - The <p> tag defines a paragraph
+        - Tags appear as an opening <div> and closing </div> pair
+    -->
+
+<head>    
+    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
+
+    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
+    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
+    <link rel="stylesheet" type="text/css" href="portfolio_style.css">
+    <title>rsaputri</title> <!-- The title displayed in the browser tab, not on the page itself -->
+
+    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+    <style>
+        #chartGrid {
+            display: flex;
+        }
+        
+    </style>
+
+    <style>
+        header {
+            font-family: 'Dr Sugiyama', cursive; /* Apply Princess Sofia font */
+            color: #5d265d; /* Apply the custom color */
+            font-size: 60px; /* Adjust the font size */
+        }
+    /* Optional styling for the link */
+        a {
+            text-decoration: none; /* Remove underline from the link */
+            color: rgb(240, 208, 235); /* Keep the text color the same as the header */
+        }
+        body {
+            font-family: 'Afacad Flux'
+        }
+
+        .collapsible {
+            background-color:  rgb(125, 109, 140);
+            color: rgb(45, 43, 43)!important;
+            cursor: pointer;
+            padding: 0px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 2px;
+            display: flex;
+            justify-content: space-between;
+            transition: color 0.3s ease; background-color: 0.3s ease;
+        }
+        .collapsible .arrow {
+             transition: transform 0.3s ease;
+        }
+
+        .collapsible.active .arrow {
+             transform: rotate(180deg);
+        }
+        .collapsible:hover {
+            background-color: rgb(76, 27, 122);
+            color: rgb(159, 159, 159)!important;
+        }
+        .collapsible.active {
+            background-color: rgb(76, 27, 122);
+            color: rgb(159, 159, 159)!important;
+        }
+
+        .section-content {
+            padding: 10px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            margin-top: 2px;
+            border-radius: 2px;
+        }
+    </style>
+    
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- Link to saputrr.github.io -->
+        
+            <div class="header-content"><a href="saputrr.github.io">R. Saputri</a></div>
+    
+        </header>
+
+    <nav>
+        <a href="portfolio.html">Portfolio</a> | <a href="project.html">Project</a> | <a href="https://uk.linkedin.com/in/rizkisaputri">LinkedIn</a> | <a
+            href="https://www.github.com/saputrr">GitHub</a>
+      </nav>
+
+
+    
+    <h3 class="medium"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+    This is my final project for PP434: Automated Data Visualization for Public Policy. For this assignment, I will create 5-8 data visualizations on a policy topic, discussing my objectives, data, challenges, and conclusions.   
+    </h3>
+    <br>
+    <div class="styled-box">
+        <h5 style="margin-bottom: 5px;">The Missing Middle?</h5>
+        <h4 class="small" style="margin-top: 5px;">Analyzing Indonesian Middle Class Spending Pattern during Jokowi's Administration</h4>
+        
+        <p> The middle-income class is often regarded as a vital driver of social, political, and economic transformation in a country. This holds true for Indonesia, which has seen the rise in middle class group and regained its upper-middle-income status according to the World Bank in 2023. However, several factors, such as the COVID-19 pandemic, global economic conditions, and limited government support for the growth of the middle-income class, have led to a decline in this group rather than its expected expansion in recent years. This article will discuss the dynamic of middle income class under Jokowi's administration in 2014-2024.</p>
+    </div>
+
+    <h3 class="small">
+        <strong>What is middle class?</strong> 
+    </h3>
+
+    <div id="vis"><figure id="Location22"></figure></div>
+        <p>The World Bank defines the middle class as individuals with less than a 10 percent chance of falling into poverty or vulnerability, typically earning 3.5 to 17 times the poverty line. In this project, I estimate the middle-class spending patterns using data from the National Socio-Economic Survey (Survei Sosial-Ekonomi Nasional) conducted by Statistics Indonesia (BPS) between 2014 and 2024 and World Bank data to convert some calculation into USD PPP. 
+        <br>
+        <br>
+        This household survey is held biannually, in March and September. For this analysis, I use the March data, which provides a larger sample size. Access to the data was granted by the Fiscal Policy Agency of the Ministry of Finance as part of my educational affiliation. 
+        <br>
+        <br>
+        Currently, automation through an API is not available, but the analysis is replicable. Due to the extensive size of the dataset, the initial step involves cleaning the data, selecting the necessary variables, and merging the 2014-2024 data using STATA. I uploaded the cleaned dataset to Google Drive and processed it further using Google Colab <a href="https://colab.research.google.com/drive/1BBeVgvLd5qURg79KjpszttuYt62BSwP-#scrollTo=J_XhWyzWXd4e">here</a>.
+        </p>
+
+
+    <div class="styled-box">
+        <h3 class="small">
+            <strong>Middle class has been declining for the past few years...</strong> 
+        </h3>
+        <div id="vis"><figure id="Location20"></figure></div>
+            <p>The Aspiring Middle Class constitutes the largest economic group in Indonesia. Elevating this group into the middle class—ensuring continuous middle-class growth—has been a frequently emphasized strategy by the government to drive economic growth. However, from the chart above, we can observe a declining share of the middle-income group even before the pandemic, approximately toward the end of President Jokowi’s first term. Therefore, I can argue that there was something more structural driving the decline in the share of the middle class long before Covid-19.</p>
+    
+       
+        </div>
+    <h3 class="small">
+        <strong>They mostly reside in urban areas.</strong> 
+    </h3>
+    <div id="vis"><figure id="Location23"></figure></div>
+        <p>The middle class predominantly resides in urban areas, reflecting the country’s rapid urbanization and urban development. Urban centers, such as Jakarta, Surabaya, and Bandung, offer better access to jobs, education, healthcare, and infrastructure, making them attractive hubs for middle-class households. Urban areas also provide more diverse employment opportunities, contributing to the middle class's concentration in cities.</p>
+
+
+    <div class="styled-box">
+    <h3 class="small">
+        <strong>The regional distribution of the middle class in Indonesia has not improved significantly...</strong> 
+    </h3>
+    <div id="vis"><figure id="Location21"></figure></div>
+        <p>From the chart, we can see that the middle class has mostly been concentrated on Java Island over the past 10 years. This is, somehow, understandable, given that half of Indonesia’s population lives on the island. Therefore, I’ve also provided the share of the middle class within each province in the dropdown menu. The result? When we slide from 2014 to 2024, we can generally observe brighter colors—indicating that the decline of the middle class has occurred across all provinces in a broad, general pattern.</p>
+    </div>
+
+    <h3 class="small">
+        <strong>Increased nominal spending on both food and nonfood consumption, but what about the real term?</strong> 
+    </h3>
+    <div id="vis"><figure id="Location24"></figure></div>
+        <p>In nominal terms, we can observe an increase in spending on both food and non-food categories. More data is needed to analyze these values in real terms, one of which is by comparing them with inflation. In the chart, we can also see that a larger portion of spending is allocated to non-food items. Therefore, it is interesting to explore the details of non-food spending further.</p>
+
+        <div class="styled-box">
+            <h3 class="small">
+                <strong>Spend the most of their income on housing and utilities</strong> 
+            </h3>
+            <div id="vis"><figure id="Location25"></figure></div>
+                <p>From the non-food perspective, the largest proportion of spending is allocated to housing, taxes and levies, as well as education. It is important to note that the figures presented here represent final income (consumption), which includes government transfers. For low-income groups, there is government support for these three expenditures, such as subsidized housing assistance and the Indonesia Smart Card. However, for the middle class, they must manage these expenditures solely based on the income they receive, without government transfers.</p>
+            </div>
+
+            <h3 class="small">
+                <strong>Policy Recommendation</strong> 
+            </h3>
+              
+            <p>The decline in the share of the middle class in Indonesia may be attributed to rising living costs, the scarcity of decent jobs, and insufficient government support for key expenditures. Supporting the middle class requires more complex policies than simply putting money directly into people’s pockets, as is done through cash transfers for low-income groups. Instead, structural solutions are needed, such as creating decent jobs, expanding access to affordable education for all, and providing public transportation to reduce transportation costs. These are long-term policies that may not produce immediate effects but are essential for sustainable improvements in the welfare of the middle class.</p>
+        
+    <script>
+
+
+        const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(button => {
+            button.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                content.style.display = (content.style.display === "block") ? "none" : "block";
+            });
+        });
+        // This is a comment in JavaScript - it's a different language to HTML and CSS
+
+        let figure_23_spec = "pr_urbanrural.json"  
+
+        vegaEmbed('#Location20', 'pr_shareclass.json')
+        vegaEmbed('#Location21', 'pr_map.json')
+        vegaEmbed('#Location22', 'pr_incomerange.json')
+        vegaEmbed('#Location23', figure_23_spec)
+        vegaEmbed('#Location24', 'pr_foodnonfood.json')
+        vegaEmbed('#Location25', 'pr_nonfoodexp.json')
+        
+
+        </script>
+
+<br><br><br><br>
+<footer>
+    <p> © 2024 </p>
+</footer>
+
+
+</html>
