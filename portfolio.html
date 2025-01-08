@@ -144,7 +144,7 @@
             </p>
         </div>
         <h3 class="small">
-            <strong> Chart 1: GDP and Life Expectancy </strong> 
+            <strong>GDP and Life Expectancy </strong> 
         </h3>
         <p> Here, I embeded the chart which visualises the relationship between GDP per capita and life expectancy. I took this chart from <a href="https://www.economicsobservatory.com/explore">Economics Observatory</a> without any adjustments.</p>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -154,7 +154,7 @@
     <section>
         <div class="chart-description">
             <h3 class="small">
-                <strong> Chart 2: Declining Population</strong> 
+                <strong>Declining Population</strong> 
             </h3>
         </div>
         <p>I took another chart from <a href="https://rdeconomist.github.io/library">Chart Library</a>. Again, without any adjustments.</p>
@@ -163,7 +163,7 @@
 
     <section>
         <div class="chart-description">
-            <h3><strong>Chart 3: Inflation</strong></h3>
+            <h3><strong>Inflation</strong></h3>
             </div>
             <p>And another chart from <a href="https://rdeconomist.github.io/library">Chart Library</a>. But sometimes it shows, sometimes it does not. I will take note and update why this glitch happens occasionally.</p>
         <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -179,7 +179,7 @@
             </p>
         </div>
         <h3 class="small">
-            <strong>Chart 4: Indonesia GDP Growth</strong> 
+            <strong>Indonesia GDP Growth</strong> 
         </h3>
         <p>I added a dashed line at the y-axis with a value of 0 to indicate that there was a contraction during the 2020-2021 period due to Covid-19. I managed to create a shading for the contraction period, accompanied by a note stating "Covid-19" in the <a href="vega.github.io/editor/">Vega Lite Editor</a>. However, when I embedded the chart on my website, it did not appear. I will take note of this issue and provide you with an update later.</p>
 
@@ -187,7 +187,7 @@
         <p><strong>Update:</strong> I managed to attach the Covid-19 shaded chart in this page after resolving problems in the chart's json file. We can find the list of the problems by shortcut Ctrl+Shift+M in our Visual Studio Code.</p>
 
         <h3 class="small">
-            <strong>Chart 5: Indonesia Inflation</strong> 
+            <strong>Indonesia Inflation</strong> 
         </h3>
         <p> I retrieved Indonesia's inflation data from the <a href="https://www.economicsobservatory.com/create">Economics Observatory</a>, which sources its API data from the Statistics Office of Indonesia. However, it was not immediately clear whether the data represented monthly or annual percentages. So, I took the following steps: (1) Check the data. After checking the data, I found that it reflects the month-on-month percentage change (MoM) so I edited the notes below the title. (2) Due to the  fluctuation caused by seasonality, I chose to show only the end-of-period (December) data. Additionally, I limited the data to start from 2011 to align it with the GDP data above.</p>
 
@@ -211,7 +211,7 @@
             </p>
         </div>
         <h3 class="small">
-            <strong>Chart 6: Anscombe's Quartet</strong> 
+            <strong>Anscombe's Quartet</strong> 
         </h3>
         <figure id="Location7"></figure> 
 
@@ -237,14 +237,14 @@
             <p> We discussed briefly about the data: the types, sources, and also how to tidying up and scrapping data from html page. This week is quite though.</p>
         </div>
         <h3 class="small">
-            <strong>Chart 7: Renewable Energy</strong> 
+            <strong>Renewable Energy</strong> 
         </h3>
         
         <figure id="Location8"></figure> 
         <p> I used API from <a href="https://www.eia.gov/opendata">EIA</a> to create the chart above.</p>
 
         <h3 class="small">
-            <strong>Chart 8: GDP per Capita</strong> 
+            <strong>GDP per Capita</strong> 
         </h3>
         
         <figure id="Location9"></figure> 
@@ -266,7 +266,7 @@
                 <br>
                 This is indeed a challenge if we want to try to publish it in printed version. However, with the website version, I think interactive chart can be the answer. I chose to apply a tickbox in the chart, so the reader can choose what they want to see.
                 <h3 class="small">
-                    <strong>Chart 9: Women in Academics World</strong> 
+                    <strong>Women in Academics World</strong> 
                 </h3>
                 <figure id="Location15"></figure>
             </p>
@@ -281,7 +281,7 @@
             <p> We practiced how to clean data from API using Python, and turned it into a chart using Vega-Lite Editor.</p>
         </div>
         <h3 class="small">
-            <strong>Chart 10: The Economy and The Environment</strong> 
+            <strong>The Economy and The Environment</strong> 
         </h3>
         
         <figure id="Location10"></figure> 
@@ -295,12 +295,21 @@
         <div class="chart-description">
             <p> It's reading week. I did the <strong>Coding Challenge 6</strong>.</p>
 
-            <h3 class="small">
-                <strong>Check</strong> 
-            </h3>
-            
+            <figure id="Location19"></figure>
+            <figure id="Location20"></figure> 
+            <figure id="Location21"></figure> 
+            <figure id="Location22"></figure> 
+            <figure id="Location23"></figure> 
+            <figure id="Location24"></figure> 
+            <figure id="Location25"></figure> 
+            <figure id="Location26"></figure>
+            <figure id="Location27"></figure> 
+            <figure id="Location28"></figure>
+
+<p>I used altair to build this dashboard using World Bank API. You can see my Colab notebook <a href="https://colab.research.google.com/drive/1naKKAW3kqLQvQLTAbDkZaKJMrskQrZOd#scrollTo=Ek_DsQRs002_">here</a>.</p>
         
-                It's reading week. I did the <strong>Coding Challenge 6</strong>.</p>
+
+
 
 
            
@@ -439,6 +448,18 @@
         vegaEmbed('#Location16', 'chart_incomeshare.json')
         vegaEmbed('#Location17', 'p_inequalitymap.json')
         vegaEmbed('#Location18', 'p_nocrisis.json')
+
+        vegaEmbed('#Location19', 'oop25 to oop25_chart.json')
+        vegaEmbed('#Location20', 'oop10_chart.json')
+        vegaEmbed('#Location21', 'oop_pov60f_chart.json')
+        vegaEmbed('#Location22', 'oop_pov60_chart.json')
+        vegaEmbed('#Location23', 'oop_365_chart.json')
+        vegaEmbed('#Location24', 'oop_215_chart.json')
+        vegaEmbed('#Location25', 'oop_365f_chart.json')
+        vegaEmbed('#Location26', 'oop_215f_chart.json')
+        vegaEmbed('#Location27', 'oop_365ff_chart.json')
+        vegaEmbed('#Location28', 'oop_365ff_chart.json')
+
 
 
 
