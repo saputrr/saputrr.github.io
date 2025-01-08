@@ -1,0 +1,677 @@
+{
+    "config": {
+      "view": {"continuousWidth": 300, "continuousHeight": 300},
+      "axis": {"grid": true},
+      "legend": {"orient": "top-left"}
+    },
+    "width":400,
+    "height":300,
+    "data": {"name": "data-f5d38b0cfb289cb25bab1ba3fdb70fac"},
+    "mark": {"type": "line"},
+    "encoding": {
+      "color": {
+        "field": "scenario",
+        "legend": {"title": "Scenario"},
+        "type": "nominal"
+      },
+      "tooltip": [
+        {"field": "date_yyyy", "type": "ordinal"},
+        {"field": "scenario", "type": "nominal"},
+        {"field": "gdp_pc_value", "type": "quantitative"}
+      ],
+      "x": {"field": "date_yyyy", "title": "Year", "type": "ordinal"},
+      "y": {
+        "field": "gdp_pc_value",
+        "title": "GDP per Capita",
+        "type": "quantitative"
+      }
+    },
+    "height": 400,
+    "title": "Actual vs Projected GDP per Capita (No Crisis)",
+    "width": 800,
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+    "datasets": {
+      "data-f5d38b0cfb289cb25bab1ba3fdb70fac": [
+        {
+          "date_yyyy": "1960",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6237014.611545
+        },
+        {
+          "date_yyyy": "1961",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6413810.18936858
+        },
+        {
+          "date_yyyy": "1962",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6351149.7102677
+        },
+        {
+          "date_yyyy": "1963",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6036114.88888702
+        },
+        {
+          "date_yyyy": "1964",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6073247.54769244
+        },
+        {
+          "date_yyyy": "1965",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 5985628.15517723
+        },
+        {
+          "date_yyyy": "1966",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6008801.20839457
+        },
+        {
+          "date_yyyy": "1967",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 5935422.82232911
+        },
+        {
+          "date_yyyy": "1968",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6407433.0541124
+        },
+        {
+          "date_yyyy": "1969",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6657959.88014821
+        },
+        {
+          "date_yyyy": "1970",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 6966539.94283812
+        },
+        {
+          "date_yyyy": "1971",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 7256587.78972652
+        },
+        {
+          "date_yyyy": "1972",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 7563224.38935331
+        },
+        {
+          "date_yyyy": "1973",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 7964142.50383525
+        },
+        {
+          "date_yyyy": "1974",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 8354363.25244023
+        },
+        {
+          "date_yyyy": "1975",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 8551415.56075335
+        },
+        {
+          "date_yyyy": "1976",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 8915155.9582213
+        },
+        {
+          "date_yyyy": "1977",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 9461076.60534571
+        },
+        {
+          "date_yyyy": "1978",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 9857975.72098481
+        },
+        {
+          "date_yyyy": "1979",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 10326721.8989056
+        },
+        {
+          "date_yyyy": "1980",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 11079184.5387959
+        },
+        {
+          "date_yyyy": "1981",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 11680283.6849524
+        },
+        {
+          "date_yyyy": "1982",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 11669683.3253828
+        },
+        {
+          "date_yyyy": "1983",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 11884873.4075492
+        },
+        {
+          "date_yyyy": "1984",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 12433560.0894632
+        },
+        {
+          "date_yyyy": "1985",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 12470419.9779477
+        },
+        {
+          "date_yyyy": "1986",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 12939360.06512
+        },
+        {
+          "date_yyyy": "1987",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 13315704.2744912
+        },
+        {
+          "date_yyyy": "1988",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 13819096.4109583
+        },
+        {
+          "date_yyyy": "1989",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 14573755.3977914
+        },
+        {
+          "date_yyyy": "1990",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 15348182.7531304
+        },
+        {
+          "date_yyyy": "1991",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 16121139.6149781
+        },
+        {
+          "date_yyyy": "1992",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 16873604.8711106
+        },
+        {
+          "date_yyyy": "1993",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 17666598.8606404
+        },
+        {
+          "date_yyyy": "1994",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 18681032.133969
+        },
+        {
+          "date_yyyy": "1995",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 19883234.8074257
+        },
+        {
+          "date_yyyy": "1996",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 21087879.7485962
+        },
+        {
+          "date_yyyy": "1997",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 21722816.3431244
+        },
+        {
+          "date_yyyy": "1998",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 18575364.7767996
+        },
+        {
+          "date_yyyy": "1999",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 18442995.4813131
+        },
+        {
+          "date_yyyy": "2000",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 19075196.2151867
+        },
+        {
+          "date_yyyy": "2001",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 19497676.2245172
+        },
+        {
+          "date_yyyy": "2002",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 20100604.6794513
+        },
+        {
+          "date_yyyy": "2003",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 20784516.8896523
+        },
+        {
+          "date_yyyy": "2004",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 21554451.7682094
+        },
+        {
+          "date_yyyy": "2005",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 22490853.8528563
+        },
+        {
+          "date_yyyy": "2006",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 23415682.0145476
+        },
+        {
+          "date_yyyy": "2007",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 24574660.8469438
+        },
+        {
+          "date_yyyy": "2008",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 25716698.8067293
+        },
+        {
+          "date_yyyy": "2009",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 26568333.0591159
+        },
+        {
+          "date_yyyy": "2010",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 27868391.3293599
+        },
+        {
+          "date_yyyy": "2011",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 29212467.8927367
+        },
+        {
+          "date_yyyy": "2012",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 30578268.7097204
+        },
+        {
+          "date_yyyy": "2013",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 31879691.8225533
+        },
+        {
+          "date_yyyy": "2014",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 33084644.0557756
+        },
+        {
+          "date_yyyy": "2015",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 34310706.1395734
+        },
+        {
+          "date_yyyy": "2016",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 35652440.9726886
+        },
+        {
+          "date_yyyy": "2017",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 37078930.3077804
+        },
+        {
+          "date_yyyy": "2018",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 38621154.3076464
+        },
+        {
+          "date_yyyy": "2019",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 40181952.6317615
+        },
+        {
+          "date_yyyy": "2020",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 39018992.8808291
+        },
+        {
+          "date_yyyy": "2021",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 40179715.0235047
+        },
+        {
+          "date_yyyy": "2022",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 41997725.0769409
+        },
+        {
+          "date_yyyy": "2023",
+          "scenario": "gdp_pc",
+          "gdp_pc_value": 43747610.7575308
+        },
+        {
+          "date_yyyy": "1960",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6237014.611545
+        },
+        {
+          "date_yyyy": "1961",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6413810.18936858
+        },
+        {
+          "date_yyyy": "1962",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6351149.7102677
+        },
+        {
+          "date_yyyy": "1963",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6036114.88888702
+        },
+        {
+          "date_yyyy": "1964",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6073247.54769244
+        },
+        {
+          "date_yyyy": "1965",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 5985628.15517723
+        },
+        {
+          "date_yyyy": "1966",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6008801.20839457
+        },
+        {
+          "date_yyyy": "1967",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 5935422.82232911
+        },
+        {
+          "date_yyyy": "1968",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6407433.0541124
+        },
+        {
+          "date_yyyy": "1969",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6657959.88014821
+        },
+        {
+          "date_yyyy": "1970",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 6966539.94283812
+        },
+        {
+          "date_yyyy": "1971",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 7256587.78972652
+        },
+        {
+          "date_yyyy": "1972",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 7563224.38935331
+        },
+        {
+          "date_yyyy": "1973",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 7964142.50383525
+        },
+        {
+          "date_yyyy": "1974",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 8354363.25244023
+        },
+        {
+          "date_yyyy": "1975",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 8551415.56075335
+        },
+        {
+          "date_yyyy": "1976",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 8915155.9582213
+        },
+        {
+          "date_yyyy": "1977",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 9461076.60534571
+        },
+        {
+          "date_yyyy": "1978",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 9857975.72098481
+        },
+        {
+          "date_yyyy": "1979",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 10326721.8989056
+        },
+        {
+          "date_yyyy": "1980",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 11079184.5387959
+        },
+        {
+          "date_yyyy": "1981",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 11680283.6849524
+        },
+        {
+          "date_yyyy": "1982",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 11669683.3253828
+        },
+        {
+          "date_yyyy": "1983",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 11884873.4075492
+        },
+        {
+          "date_yyyy": "1984",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 12433560.0894632
+        },
+        {
+          "date_yyyy": "1985",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 12470419.9779477
+        },
+        {
+          "date_yyyy": "1986",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 12939360.06512
+        },
+        {
+          "date_yyyy": "1987",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 13315704.2744912
+        },
+        {
+          "date_yyyy": "1988",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 13819096.4109583
+        },
+        {
+          "date_yyyy": "1989",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 14573755.3977914
+        },
+        {
+          "date_yyyy": "1990",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 15348182.7531304
+        },
+        {
+          "date_yyyy": "1991",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 16121139.6149781
+        },
+        {
+          "date_yyyy": "1992",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 16873604.8711106
+        },
+        {
+          "date_yyyy": "1993",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 17666598.8606404
+        },
+        {
+          "date_yyyy": "1994",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 18681032.133969
+        },
+        {
+          "date_yyyy": "1995",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 19883234.8074257
+        },
+        {
+          "date_yyyy": "1996",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 21087879.7485962
+        },
+        {
+          "date_yyyy": "1997",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 21722816.3431244
+        },
+        {
+          "date_yyyy": "1998",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 22475843.222074285
+        },
+        {
+          "date_yyyy": "1999",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 23254973.966722988
+        },
+        {
+          "date_yyyy": "2000",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 24061113.47412461
+        },
+        {
+          "date_yyyy": "2001",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 24895198.009816684
+        },
+        {
+          "date_yyyy": "2002",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 25758196.29521651
+        },
+        {
+          "date_yyyy": "2003",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 26651110.63271238
+        },
+        {
+          "date_yyyy": "2004",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 27574978.069756363
+        },
+        {
+          "date_yyyy": "2005",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 28530871.60331066
+        },
+        {
+          "date_yyyy": "2006",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 29519901.42604638
+        },
+        {
+          "date_yyyy": "2007",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 30543216.21574214
+        },
+        {
+          "date_yyyy": "2008",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 31602004.469379965
+        },
+        {
+          "date_yyyy": "2009",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 32697495.883487955
+        },
+        {
+          "date_yyyy": "2010",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 33830962.782332905
+        },
+        {
+          "date_yyyy": "2011",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 35003721.595621556
+        },
+        {
+          "date_yyyy": "2012",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 36217134.38742673
+        },
+        {
+          "date_yyyy": "2013",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 37472610.43811408
+        },
+        {
+          "date_yyyy": "2014",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 38771607.88110675
+        },
+        {
+          "date_yyyy": "2015",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 40115635.396388836
+        },
+        {
+          "date_yyyy": "2016",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 41506253.962714635
+        },
+        {
+          "date_yyyy": "2017",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 42945078.67055861
+        },
+        {
+          "date_yyyy": "2018",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 44433780.59791177
+        },
+        {
+          "date_yyyy": "2019",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 45974088.75110296
+        },
+        {
+          "date_yyyy": "2020",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 47567792.07289925
+        },
+        {
+          "date_yyyy": "2021",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 49216741.520217575
+        },
+        {
+          "date_yyyy": "2022",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 50922852.21386082
+        },
+        {
+          "date_yyyy": "2023",
+          "scenario": "gdp_pc_no_crisis",
+          "gdp_pc_value": 52688105.66277501
+        }
+      ]
+    }
+  }
