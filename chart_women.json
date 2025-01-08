@@ -48,7 +48,8 @@
       "name": "Share_of_women_inventors",
       "bind": {
         "input": "checkbox",
-        "name": "Share of women inventors    "
+        "name": "Share of women inventors    ",
+        "value": true
       }
     }
   ],
@@ -82,7 +83,7 @@
         "color": {
           "condition": {
             "param": "Health_sciences",
-            "value": "rgb(117, 78, 153)"
+            "value": "#F4C245"
           }
         },
         "opacity": {
@@ -127,7 +128,7 @@
         "color": {
           "condition": {
             "param": "Physical_sciences",
-            "value": "#ff7f0e"
+            "value": "#E6224B"
           }
         },
         "opacity": {
@@ -172,7 +173,7 @@
         "color": {
           "condition": {
             "param": "Engineering",
-            "value": "#2ca02c"
+            "value": "#36B7B4"
           }
         },
         "opacity": {
@@ -185,6 +186,96 @@
         "tooltip": [
           { "field": "Country", "type": "nominal", "title": "Country" },
           { "field": "Engineering", "type": "quantitative", "title": "Percentage" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rect",
+        "width": 3,
+        "height": 8,
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "Computer_science_maths",
+          "scale": { "domain": [0, 0.6] },
+          "axis": {
+            "values": [0, 0.5, 0.6],
+            "title": "share",
+            "titlePadding": 10
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": null,
+          "title": "Country",
+          "axis": {
+            "grid": true
+          }
+        },
+        "color": {
+          "condition": {
+            "param": "Computer_science_maths",
+            "value": "#179FDB"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "Computer_science_maths",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          { "field": "Country", "type": "nominal", "title": "Country" },
+          { "field": "Computer_science_maths", "type": "quantitative", "title": "Percentage" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "width": 3,
+        "height": 8,
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "Share_of_women_inventors",
+          "scale": { "domain": [0, 0.6] },
+          "axis": {
+            "values": [0, 0.5, 0.6],
+            "title": "share",
+            "titlePadding": 10
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Country",
+          "sort": null,
+          "title": "Country",
+          "axis": {
+            "grid": true
+          }
+        },
+        "color": {
+          "condition": {
+            "param": "Share_of_women_inventors",
+            "value": "#754e99"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "Share_of_women_inventors",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          { "field": "Country", "type": "nominal", "title": "Country" },
+          { "field": "Share_of_women_inventors", "type": "quantitative", "title": "Percentage" }
         ]
       }
     }

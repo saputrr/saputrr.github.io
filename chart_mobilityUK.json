@@ -19,7 +19,7 @@
         "title": null
       }
     },
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
     "title": {
         "text": "Absolute Income Mobility",
@@ -32,7 +32,7 @@
         "subtitleColor": "#333333"
       },
       "height": 300,
-      "width": "container",
+      "width": 400,
       "autosize": {
         "type": "fit",
         "contains": "padding"

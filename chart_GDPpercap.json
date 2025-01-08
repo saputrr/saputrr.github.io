@@ -1,8 +1,8 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
 "height": 300,
-"width": "container",
+"width": "400",
     "data": {
       "name": "data-27bd0b3d1f599c7a0efcb0001a60cb7a"
     },

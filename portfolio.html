@@ -105,7 +105,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
     
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -292,6 +294,16 @@
     <section>
         <div class="chart-description">
             <p> It's reading week. I did the <strong>Coding Challenge 6</strong>.</p>
+
+            <h3 class="small">
+                <strong>Check</strong> 
+            </h3>
+            
+        
+                It's reading week. I did the <strong>Coding Challenge 6</strong>.</p>
+
+
+           
         </div>
     </section>
     </div>
@@ -310,7 +322,7 @@
         <h3 class="small">
             <strong>Chart 12: Indonesia Map</strong> 
         </h3>
-        <figure id="#Location14"></figure>  
+        <figure id="#Location24"></figure>  
        
         
     <h3 class="small">
@@ -338,6 +350,21 @@
     <div style="height: 2px;"></div>
     <button class="collapsible"><h6>Week 10: Interactive Visualisation (#CC10)</h6></button>
     <div class="section-content">
+        <h3 class="small">
+            <strong>Chart 12: Indonesia Income Share by Income Group</strong> 
+        </h3>
+        <figure id="#Location16"></figure>  
+
+        <p> I used the World Bank’s API to batch download inequality data from the World Development Indicators (WDI), and filter it to look at Indonesian data. I want to look at how much each income group has share in overall income. As expected, more than 40% of income owned by highest 20%, meanwhile the lowest 20% only has less than 10% of total income in the country. I  used Altair to create these interactive charts with year slider so you can pick the range of year we want to see. You can see my Colab notebook <a href="https://colab.research.google.com/drive/1ejluZ8ATznE_7B-E6M_uq7F0gVUGOdSG#scrollTo=-61xunmqvifN">here</a>.
+
+            <h3 class="small">
+                <strong>Chart 12: Spatial Inequality</strong> 
+            </h3>
+            <figure id="#Location17"></figure>  
+    
+            <p> It is also interesting to see inequality in spatial perspective. I use SUSENAS dataset to create this interactive chart where you can the share of poor people in national or provincial level for the last 10 years. You can see my Colab notebook <a href="https://colab.research.google.com/drive/1BBeVgvLd5qURg79KjpszttuYt62BSwP-#scrollTo=MK3Mshq2xGY8">here</a>.
+            
+
     <section>
     <div class="chart-description">
       
@@ -374,7 +401,7 @@
         let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
         let figure_2_spec = "chart1_declining_population.json"       
         let figure_3_spec = "chart2_inflation.json"                                               // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-      
+        let figure_14_spec = "chart_IDNmap.json"
 
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 
@@ -396,7 +423,12 @@
         vegaEmbed('#Location11', 'chart_guinessprice.json')
         vegaEmbed('#Location12', 'chart_map.json')
         vegaEmbed('#Location13', 'chart_mobilityUK.json')
-        vegaEmbed('#Location14', 'chart_IDNmap.json')
+        vegaEmbed('#Location14', figure_14_spec)
+        vegaEmbed('#Location15', 'chart_women.json')
+        vegaEmbed('#Location16', 'chart_incomeshare.json')
+        vegaEmbed('#Location17', 'p_inequalitymap.json')
+
+
 
     </script>
     </div>
@@ -405,7 +437,7 @@
 
 <br><br><br><br>
 <footer>
-    <p>R. Saputri © 2024 </p>
+    <p> © 2024 </p>
 </footer>
 
 
