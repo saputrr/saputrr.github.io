@@ -125,7 +125,7 @@
             <strong>GDP and Life Expectancy </strong> 
         </h3>
         <p> Here, I embeded the chart which visualises the relationship between GDP per capita and life expectancy. I took this chart from <a href="https://www.economicsobservatory.com/explore">Economics Observatory</a> without any adjustments.</p>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <div id="vis"><figure id="Location1"></figure></div> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
     
 
@@ -136,7 +136,7 @@
             </h3>
         </div>
         <p>I took another chart from <a href="https://rdeconomist.github.io/library">Chart Library</a>. Again, without any adjustments.</p>
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <div id="vis"><figure id="Location2"></figure></div> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
             </section>
 
     <section>
@@ -144,7 +144,7 @@
             <h3><strong>Inflation</strong></h3>
             </div>
             <p>And another chart from <a href="https://rdeconomist.github.io/library">Chart Library</a>. But sometimes it shows, sometimes it does not. I will take note and update why this glitch happens occasionally.</p>
-        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+            <div id="vis"><figure id="Location3"></figure></div> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
     </div>
     <div style="height: 2px;"></div>
@@ -161,7 +161,7 @@
         </h3>
         <p>I added a dashed line at the y-axis with a value of 0 to indicate that there was a contraction during the 2020-2021 period due to Covid-19. I managed to create a shading for the contraction period, accompanied by a note stating "Covid-19" in the <a href="vega.github.io/editor/">Vega Lite Editor</a>. However, when I embedded the chart on my website, it did not appear. I will take note of this issue and provide you with an update later.</p>
 
-        <figure id="Location4"></figure> 
+        <div id="vis"><figure id="Location4"></figure></div>
         <p><strong>Update:</strong> I managed to attach the Covid-19 shaded chart in this page after resolving problems in the chart's json file. We can find the list of the problems by shortcut Ctrl+Shift+M in our Visual Studio Code.</p>
 
         <h3 class="small">
@@ -169,11 +169,11 @@
         </h3>
         <p> I retrieved Indonesia's inflation data from the <a href="https://www.economicsobservatory.com/create">Economics Observatory</a>, which sources its API data from the Statistics Office of Indonesia. However, it was not immediately clear whether the data represented monthly or annual percentages. So, I took the following steps: (1) Check the data. After checking the data, I found that it reflects the month-on-month percentage change (MoM) so I edited the notes below the title. (2) Due to the  fluctuation caused by seasonality, I chose to show only the end-of-period (December) data. Additionally, I limited the data to start from 2011 to align it with the GDP data above.</p>
 
-        <figure id="Location5"></figure>
+        <div id="vis"><figure id="Location5"></figure></div>
         <br>
         <p> However, the data above is not up-to-date (the latest data is from 2019). Therefore, I created another csv dataset and uploaded it in GitHub, then built the chart from scratch. I also added a tooltip so we can hover over the line chart to display the month and value. 
             <br>
-            <figure id="Location6"></figure>            
+            <div id="vis"><figure id="Location6"></figure></div>            
             <br>
             <p>Interestingly, the current dataset reveals that Indonesia experienced deflation for five consecutive months. This is a rare occurence, even during Covid-19 pandemic. Some attribute it to declining purchasing power. But is that really the case?</p>
 
@@ -191,7 +191,7 @@
         <h3 class="small">
             <strong>Anscombe's Quartet</strong> 
         </h3>
-        <figure id="Location7"></figure> 
+        <div id="vis"><figure id="Location7"></figure></div> 
 
     </section>
     <section>
@@ -202,7 +202,7 @@
             <p>
                 Percentage of children whose family income at 30 years old was higher than their parents’ family income at 30 years old, by country and year of birth (‘birth cohort’).
             </p>
-            <figure id="Location13"></figure> 
+            <div id="vis"><figure id="Location13"></figure></div>
         </div>
     </section>
     </div>
@@ -218,14 +218,14 @@
             <strong>Renewable Energy</strong> 
         </h3>
         
-        <figure id="Location8"></figure> 
+        <div id="vis"><figure id="Location8"></figure></div> 
         <p> I used API from <a href="https://www.eia.gov/opendata">EIA</a> to create the chart above.</p>
 
         <h3 class="small">
             <strong>GDP per Capita</strong> 
         </h3>
         
-        <figure id="Location9"></figure> 
+        <div id="vis"><figure id="Location9"></figure></div> 
         <p> <strong>Coding Challenge 5.</strong>
             <br>I choose this site because it provides API and I can use pandas to do the scraping. I used python to clean and create the json file of the GDP per Capita chart. You can see the simple code in my repository (title: gdp_indonesia.ipynb).</p>
 
@@ -246,7 +246,7 @@
                 <h3 class="small">
                     <strong>Women in Academics World</strong> 
                 </h3>
-                <figure id="Location15"></figure>
+                <div id="vis"><figure id="Location15"></figure></div>
             </p>
         </div>
     </section>
@@ -262,7 +262,7 @@
             <strong>The Economy and The Environment</strong> 
         </h3>
         
-        <figure id="Location10"></figure> 
+        <div id="vis"><figure id="Location10"></figure></div> 
         <p> I used Google Colab to clean the data from the World Bank API, and then use the Vega-Lite Editor to create the chart above.</p>
     </section>
         </div>
@@ -273,7 +273,7 @@
         <div class="chart-description">
             <p> It's reading week. I did the <strong>Coding Challenge 6</strong>.</p>
 
-            <figure id="Location19"></figure>
+            <div id="vis"><figure id="Location19"></figure>
             <figure id="Location20"></figure> 
             <figure id="Location21"></figure> 
             <figure id="Location22"></figure> 
@@ -282,7 +282,7 @@
             <figure id="Location25"></figure> 
             <figure id="Location26"></figure>
             <figure id="Location27"></figure> 
-            <figure id="Location28"></figure>
+            <figure id="Location28"></figure></div>
 
 <p>I used altair to build this dashboard using World Bank API. You can see my Colab notebook <a href="https://colab.research.google.com/drive/1naKKAW3kqLQvQLTAbDkZaKJMrskQrZOd#scrollTo=Ek_DsQRs002_">here</a>.</p>
         
@@ -304,18 +304,18 @@
         <h3 class="small">
             <strong>Chart 11: The Price of a Pint</strong> 
         </h3>
-        <figure id="Location11"></figure> 
+        <div id="vis"><figure id="Location11"></figure></div> 
         <p>I have my own map for Indonesia regional GDP growth <strong>(Coding Challenge 7)</strong>.</p>
         <h3 class="small">
             <strong>Chart 12: Indonesia Map</strong> 
         </h3>
-        <figure id="#Location24"></figure>  
+        <div id="vis"><figure id="#Location24"></figure></div>  
        
         
     <h3 class="small">
         <strong>Chart 13: Indonesia Regional GDP Growth</strong> 
     </h3>
-    <figure id="Location12"></figure>  
+    <div id="vis"><figure id="Location12"></figure></div>  
     </section>
     </div>
     <div style="height: 2px;"></div>
@@ -333,7 +333,7 @@
         <h3 class="small">
             <strong>What if there's no crisis?</strong> 
         </h3>
-        <figure id="#Location18"></figure>  
+        <div id="vis"><figure id="#Location18"></figure></div>  
 
         <p> Using World Bank’s API to look at the GDP per capita of Indonesia, I tried to experiment what would have been happend with Indonesia's GDP per capita trajectory if there was no crises, I mean Asian Financial Crisis 1998 and Covid-19 pandemic in 2020. It is very simple calculation, assuming the growth after 1997 continue at 3.47% that is average 1960-1997. You can see my Colab notebook <a href="https://colab.research.google.com/drive/1shcjRCH21Iu8uzskB1JOdqaWK2gx7_Fi#scrollTo=WQWkNZECXlx5">here</a>.
 
@@ -351,14 +351,14 @@
         <h3 class="small">
             <strong>Chart 12: Indonesia Income Share by Income Group</strong> 
         </h3>
-        <figure id="#Location16"></figure>  
+        <div id="vis"><figure id="#Location16"></figure></div>  
 
         <p> I used the World Bank’s API to batch download inequality data from the World Development Indicators (WDI), and filter it to look at Indonesian data. I want to look at how much each income group has share in overall income. As expected, more than 40% of income owned by highest 20%, meanwhile the lowest 20% only has less than 10% of total income in the country. I  used Altair to create these interactive charts with year slider so you can pick the range of year we want to see. You can see my Colab notebook <a href="https://colab.research.google.com/drive/1ejluZ8ATznE_7B-E6M_uq7F0gVUGOdSG#scrollTo=-61xunmqvifN">here</a>.
 
             <h3 class="small">
                 <strong>Chart 12: Spatial Inequality</strong> 
             </h3>
-            <figure id="#Location17"></figure>  
+            <div id="vis"><figure id="#Location17"></figure></div>  
     
             <p> It is also interesting to see inequality in spatial perspective. I use SUSENAS dataset to create this interactive chart where you can the share of poor people in national or provincial level for the last 10 years. You can see my Colab notebook <a href="https://colab.research.google.com/drive/1BBeVgvLd5qURg79KjpszttuYt62BSwP-#scrollTo=MK3Mshq2xGY8">here</a>.
             
