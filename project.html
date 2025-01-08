@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
 
 <head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
     <link rel="stylesheet" type="text/css" href="portfolio_style.css">
-    <title>rsaputri</title> <!-- The title displayed in the browser tab, not on the page itself -->
-
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <title>rsaputri</title>
+    
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -217,5 +207,21 @@
     <p> © 2024 </p>
 </footer>
 
+
+<style>
+ 
+    @media only screen and (max-width: 719px) {
+        .chart-desktop {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 720px) {
+        .chart-mobile {
+            display: none;
+        }
+    }
+
+</style>
 
 </html>
