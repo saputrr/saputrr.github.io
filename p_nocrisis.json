@@ -1,35 +1,35 @@
 {
-    "config": {
-      "view": {"continuousWidth": 300, "continuousHeight": 300},
-      "axis": {"grid": true},
-      "legend": {"orient": "top-left"}
-    },
-    "width":400,
-    "height":300,
+       
     "data": {"name": "data-f5d38b0cfb289cb25bab1ba3fdb70fac"},
     "mark": {"type": "line"},
     "encoding": {
       "color": {
-        "field": "scenario",
-        "legend": {"title": "Scenario"},
-        "type": "nominal"
-      },
+      "field": "scenario",
+      "legend": {"title": "Scenario"},
+      "type": "nominal",
+      "scale": {
+        "domain": ["gdp_pc", "gdp_pc_no_crisis"],
+        "range": ["#E6224B", "#754e99"]
+      }
+    },
       "tooltip": [
         {"field": "date_yyyy", "type": "ordinal"},
         {"field": "scenario", "type": "nominal"},
         {"field": "gdp_pc_value", "type": "quantitative"}
       ],
-      "x": {"field": "date_yyyy", "title": "Year", "type": "ordinal"},
+      "x": {"field": "date_yyyy", "title": "Year", "type": "temporal", "axis": {
+          "tickCount": 10
+        }},
       "y": {
         "field": "gdp_pc_value",
         "title": "GDP per Capita",
         "type": "quantitative"
       }
     },
-    "height": 400,
+    "height": 300,
     "title": "Actual vs Projected GDP per Capita (No Crisis)",
-    "width": 800,
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+    "width": 400,
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "datasets": {
       "data-f5d38b0cfb289cb25bab1ba3fdb70fac": [
         {

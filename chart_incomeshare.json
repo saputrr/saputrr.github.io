@@ -1,5 +1,62 @@
 {
-    "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+    "config": {
+      "font": "Afacad Flux",
+      "mark": {"line": {"interpolate": "monotone"}},
+      "view": {"stroke": "transparent", "height": 300},
+      "range": {
+        "category": [
+          "#F4C245",
+          "#E6224B",
+          "#754e99",
+          "#0063AF",
+          "#36B7B4",
+          "#179FDB",
+          "#EB5C2E"
+        ]
+        },
+      "axisX": {
+        "domainColor": "#676A86",
+        "domainOpacity": 0.5,
+        "grid": false,
+        "labelAngle": 0,
+        "labelColor": "#676A86",
+        "labelOpacity": 0.7,
+        "orient": "bottom",
+        "tickColor": "#676A86",
+        "tickCount": 10,
+        "tickOpacity": 0.5,
+        "title": false,
+        "titleAlign": "center",
+        "titleAnchor": "middle",
+        "titleColor": "#676A86",
+        "titleFontSize": 12,
+        "titleOpacity": 0.8,
+        "titleY": -15
+      },
+      "axisY": {
+        "domainColor": "#676A86",
+        "domainOpacity": 0.5,
+        "gridColor": "#676A86",
+        "gridDash": [1, 5],
+        "gridOpacity": 0.5,
+        "labelColor": "transparent",
+        "labelOpacity": 0,
+        "labelPadding": 0,
+        "labelFontSize":0,
+        "tickColor": "transparent",
+        "tickCount": 8,
+        "tickOpacity": 0,
+        "ticks": false,
+        "titleAlign": "left",
+        "titleAngle": 0,
+        "titleBaseline": "bottom",
+        "titleColor": "#676A86",
+        "titleFontSize": 0,
+        "titleOpacity": 0.8,
+        "titleX": 0,
+        "titleY": -7
+      }
+    },
     "data": {"name": "data-f2fab930c00f2ac6dbb0648e5eb3b1ec"},
     "mark": {"type": "line"},
     "width":400,
@@ -28,12 +85,40 @@
       }
     },
     "params": [
-      {
+        {
+            "name": "start_year",
+            "value": 1960,
+            "bind": {
+              "input": "range",
+              "min": 1960,
+              "max": 2023,
+              "step": 1,
+              "name": "Start Year: "
+            }
+          },
+          {
+            "name": "end_year",
+            "value": 2023,
+            "bind": {
+              "input": "range",
+              "min": 1960,
+              "max": 2023,
+              "step": 1,
+              "name": "End Year: "
+            }
+          },
+        {
         "name": "param_4",
         "select": {"type": "interval", "encodings": ["x", "y"]},
         "bind": "scales"
       }
     ],
+
+    "transform": [
+        {
+            "filter": "year(datum.date) >= start_year && year(datum.date) <= end_year"
+          }
+  ],
     "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
     "datasets": {
       "data-f2fab930c00f2ac6dbb0648e5eb3b1ec": [
